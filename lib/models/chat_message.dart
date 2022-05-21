@@ -30,7 +30,7 @@ class ChatMessage {
         senderID: _json["sender_id"],
         type: _messageType,
         content: _json["content"],
-        sentTime: _json["sent_time"]);
+        sentTime: _json["sent_time"].toDate());
   }
   Map<String, dynamic> toJson() {
     String _messageType;
