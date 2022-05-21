@@ -80,7 +80,7 @@ class _ChatPageState extends State<ChatPage> {
                       onPressed: () {},
                       icon: const Icon(
                         Icons.delete,
-                        color: Color.fromRGBO(0, 82, 218, 1.0),
+                        color: Color.fromARGB(255, 238, 15, 15),
                       )),
                   secondaryAction: IconButton(
                       onPressed: () {},
@@ -88,12 +88,47 @@ class _ChatPageState extends State<ChatPage> {
                         Icons.arrow_back,
                         color: Color.fromRGBO(0, 82, 218, 1.0),
                       )),
-                )
+                ),
+                _messagesListView()
               ],
             ),
           ),
         ),
       );
     });
+  }
+
+  _messagesListView() {
+    if (_pageProvider.messages != null) {
+      if (_pageProvider.messages!.length != 0) {
+        return Container(
+          height: _deviceHeight * 0.74,
+          child: ListView.builder(
+              itemCount: _pageProvider.messages!.length,
+              itemBuilder: (BuildContext _context, int index) {
+                return Container(
+                  child: Text(
+                    _pageProvider.messages![index].content,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                );
+              }),
+        );
+      } else {
+        return const Align(
+          alignment: Alignment.center,
+          child: Text(
+            "be the first to say hello",
+            style: TextStyle(color: Colors.white),
+          ),
+        );
+      }
+    } else {
+      return const Center(
+        child: CircularProgressIndicator(
+          color: Colors.white,
+        ),
+      );
+    }
   }
 }
