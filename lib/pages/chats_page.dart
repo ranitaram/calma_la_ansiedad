@@ -1,10 +1,17 @@
 //packages
+
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 //widgets
 import 'package:calmar_la_ansiedad/widgets/custom_list_view_tiles.dart';
 import 'package:calmar_la_ansiedad/widgets/top_bar.dart';
+
+//services
+import '../services/navigation_services.dart';
+
+//pages
+import '../pages/chat_page.dart';
 
 //providres
 import 'package:calmar_la_ansiedad/providers/authentication_provider.dart';
@@ -25,6 +32,7 @@ class _ChatsPageState extends State<ChatsPage> {
   late double _deviceWidth;
 
   late AuthenticationProvider _auth;
+  late NavigationServices _navigation;
   late ChatsPageProvider _pageProvider;
 
   @override
@@ -32,6 +40,7 @@ class _ChatsPageState extends State<ChatsPage> {
     _deviceHeight = MediaQuery.of(context).size.height;
     _deviceWidth = MediaQuery.of(context).size.width;
     _auth = Provider.of<AuthenticationProvider>(context);
+    _navigation = GetIt.instance.get<NavigationServices>();
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<ChatsPageProvider>(
@@ -73,7 +82,7 @@ class _ChatsPageState extends State<ChatsPage> {
 
   _chatList() {
     List<Chat>? _chats = _pageProvider.chats;
-    print(_chats);
+
     return Expanded(
       child: (() {
         if (_chats != null) {
@@ -118,6 +127,8 @@ class _ChatsPageState extends State<ChatsPage> {
         imagePath: _chat.imageUrl(),
         isActive: _isActive,
         isActivity: _chat.activity,
-        onTap: () {});
+        onTap: () {
+          _navigation.navigateToPage(ChatPage(chat: _chat));
+        });
   }
 }
