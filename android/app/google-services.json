@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1070800748694",
+    "project_id": "calmar-la-ansiedad",
+    "storage_bucket": "calmar-la-ansiedad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070800748694:android:84f43d50885073658782b7",
+        "android_client_info": {
+          "package_name": "com.example.calmar_la_ansiedad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070800748694-gls8lte320j07vg18mdu6vqpl3fng4lk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoMDyKhaGUW3x6BJubvCKXn_Ow_1HvSKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070800748694-gls8lte320j07vg18mdu6vqpl3fng4lk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1070800748694-j9aujfekalno6kefb3ujihifgsduo8nu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calmarLaAnsiedad"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
