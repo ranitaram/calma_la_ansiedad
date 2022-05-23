@@ -14,7 +14,7 @@ import '../models/chat_message.dart';
 import '../models/chat_user.dart';
 
 class ChatsPageProvider extends ChangeNotifier {
-  AuthenticationProvider _auth;
+  final AuthenticationProvider _auth;
 
   late DatabaseService _db;
 
@@ -56,6 +56,7 @@ class ChatsPageProvider extends ChangeNotifier {
                   _chatMessage.docs.first.data()! as Map<String, dynamic>;
               ChatMessage _message = ChatMessage.fromJson(_messageData);
               _messages.add(_message);
+              print(_message);
             }
             //return chat instance
             return Chat(

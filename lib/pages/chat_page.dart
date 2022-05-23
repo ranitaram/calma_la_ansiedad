@@ -63,7 +63,7 @@ class _ChatPageState extends State<ChatPage> {
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.symmetric(
-              horizontal: _deviceHeight * 0.03,
+              horizontal: _deviceWidth * 0.02,
               vertical: _deviceHeight * 0.02,
             ),
             height: _deviceHeight,
@@ -74,22 +74,27 @@ class _ChatPageState extends State<ChatPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 TopBar(
-                  this.widget.chat.title(),
+                  widget.chat.title(),
                   fontSize: 25,
                   primaryAction: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _pageProvider.deleteChat();
+                      },
                       icon: const Icon(
                         Icons.delete,
                         color: Color.fromARGB(255, 238, 15, 15),
                       )),
                   secondaryAction: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _pageProvider.goBack();
+                      },
                       icon: const Icon(
                         Icons.arrow_back,
                         color: Color.fromRGBO(0, 82, 218, 1.0),
                       )),
                 ),
-                _messagesListView()
+                _messagesListView(),
+                _sendMessageForm()
               ],
             ),
           ),
@@ -104,6 +109,7 @@ class _ChatPageState extends State<ChatPage> {
         return Container(
           height: _deviceHeight * 0.74,
           child: ListView.builder(
+              controller: _messagesListViewController,
               itemCount: _pageProvider.messages!.length,
               itemBuilder: (BuildContext _context, int index) {
                 ChatMessage _message = _pageProvider.messages![index];
@@ -135,5 +141,89 @@ class _ChatPageState extends State<ChatPage> {
         ),
       );
     }
+  }
+
+  _sendMessageForm() {
+    return Container(
+      height: _deviceHeight * 0.06,
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(30, 29, 37, 1.0),
+        borderRadius: BorderRadius.circular(100),
+      ),
+      margin: EdgeInsets.symmetric(
+          horizontal: _deviceWidth * 0.02, vertical: _deviceHeight * 0.03),
+      child: Form(
+          key: _messageFormState,
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _messageTextField(),
+              _sendMessageButton(),
+              _imageMessageButon()
+            ],
+          )),
+    );
+  }
+
+  _messageTextField() {
+    return SizedBox(
+      width: _deviceWidth * 0.55,
+      child: CustomTextFormField(
+          onSaved: (_value) {
+            _pageProvider.message =
+                _value; //vamos a tomar el valor que se pasa y la función automática para el campo de formulario de texto.
+            print(_pageProvider.message);
+          },
+          regEx: r"^(?!\s*$).+",
+          hinText: "Type a message",
+          obscureText: false),
+    );
+  }
+
+  _sendMessageButton() {
+    double _size = _deviceHeight * 0.04;
+    return Container(
+      height: _size,
+      width: _size,
+      child: IconButton(
+          onPressed: () {
+            if (_messageFormState.currentState!.validate()) {
+              print(_messageFormState.currentState!.validate());
+              //tomar el estado del formulario de mensaje y quiero tomar el estado actual, y quiero validar que realmente tenemos entradas válidas.
+              _messageFormState.currentState!
+                  .save(); //tomar el estado del formulario de mensaje, ese estado actual y llamaremos a la función de guardar.
+              // print(_messageFormState.currentState!);
+              _pageProvider
+                  .sendTextMessage(); //Y una vez que lo hayamos guardado, lo siguiente que haremos es elegir nuestro proveedor y luego usar esta función de envío de mensajes de texto. Así que ahora si ordeno guardar y lo que haré es que, en lugar de solo hacer esto, voy a ir a la definición del botón Enviar mensaje de texto y les diré lo que sucederá.
+              _messageFormState.currentState!.reset();
+            }
+          },
+          icon: const Icon(
+            Icons.send,
+            color: Colors.white,
+          )),
+    );
+  }
+
+  _imageMessageButon() {
+    double _size = _deviceHeight * 0.04;
+    return Container(
+      height: _size,
+      width: _size,
+      child: FloatingActionButton(
+        backgroundColor: Color.fromRGBO(
+          0,
+          82,
+          218,
+          1.0,
+        ),
+        onPressed: () {
+          _pageProvider.sendImageMessage();
+        },
+        child: Icon(Icons.camera_enhance),
+      ),
+    );
   }
 }

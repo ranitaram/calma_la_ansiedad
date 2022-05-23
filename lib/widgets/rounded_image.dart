@@ -48,7 +48,7 @@ class RoundedImageFile extends StatelessWidget {
 class RoundedImageNetworkWithStatusIndicator extends RoundedImageNetwork {
   final bool isActive;
 
-  RoundedImageNetworkWithStatusIndicator({
+  const RoundedImageNetworkWithStatusIndicator({
     required Key key,
     required this.isActive,
     required String imagePath,

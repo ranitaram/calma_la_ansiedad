@@ -27,9 +27,9 @@ class ChatMessage {
         _messageType = MessageType.UNKNOWN;
     }
     return ChatMessage(
-        senderID: _json["sender_id"],
-        type: _messageType,
         content: _json["content"],
+        type: _messageType,
+        senderID: _json["sender_id"],
         sentTime: _json["sent_time"].toDate());
   }
   Map<String, dynamic> toJson() {
@@ -45,7 +45,7 @@ class ChatMessage {
         _messageType = "";
     }
     return {
-      "constent": content,
+      "content": content,
       "type": _messageType,
       "sender_id": senderID,
       "sent_time": Timestamp.fromDate(sentTime)

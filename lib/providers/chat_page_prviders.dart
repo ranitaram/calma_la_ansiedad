@@ -24,19 +24,30 @@ class ChatPageProvider extends ChangeNotifier {
   late MediaService _media;
   late NavigationServices _navigation;
 
-  AuthenticationProvider _auth;
-  ScrollController _messagesListViewController;
+  final AuthenticationProvider _auth;
+  final ScrollController _messagesListViewController;
 
-  String _chatId;
+  final String _chatId;
   List<ChatMessage>? messages;
 
   late StreamSubscription _messagesStream;
 
   String? _message;
 
-  String get message {
-    return message;
+  String get message => _message!;
+  set message(String _value) {
+    _message = _value;
+    print(_message);
   }
+
+  // String get message {
+  //   return message;
+  // }
+
+  // set message(String _value) {
+  //   _message = _value;
+  //   print(_message);
+  // }
 
   ChatPageProvider(this._chatId, this._auth, this._messagesListViewController) {
     _db = GetIt.instance.get<DatabaseService>();
@@ -59,7 +70,10 @@ class ChatPageProvider extends ChangeNotifier {
           return ChatMessage.fromJson(_messageData);
         }).toList();
         messages = _messages;
+        print(messages);
         notifyListeners();
+        // _messagesListViewController
+        //     .jumpTo(_messagesListViewController.position.maxScrollExtent);
         //add scroll to bottom call
       });
     } catch (e) {
@@ -69,6 +83,8 @@ class ChatPageProvider extends ChangeNotifier {
 
   void sendTextMessage() {
     if (_message != null) {
+      //Entonces, dentro de nuestro botón de enviar mensaje de texto, ya sabemos que buscamos este mensaje.
+      print(_message);
       ChatMessage _messageToSend = ChatMessage(
           senderID: _auth.user.uid,
           type: MessageType.TEXT,
