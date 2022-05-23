@@ -1,20 +1,23 @@
 import 'dart:async';
-//packages
+
+//Packages
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-//services
+//Services
 import '../services/database_service.dart';
-//providers
+
+//Providers
 import '../providers/authentication_provider.dart';
-//models
+
+//Models
 import '../models/chat.dart';
 import '../models/chat_message.dart';
 import '../models/chat_user.dart';
 
 class ChatsPageProvider extends ChangeNotifier {
-  final AuthenticationProvider _auth;
+  AuthenticationProvider _auth;
 
   late DatabaseService _db;
 
@@ -26,6 +29,7 @@ class ChatsPageProvider extends ChangeNotifier {
     _db = GetIt.instance.get<DatabaseService>();
     getChats();
   }
+
   @override
   void dispose() {
     _chatsStream.cancel();
@@ -37,36 +41,42 @@ class ChatsPageProvider extends ChangeNotifier {
       _chatsStream =
           _db.getChatsForUser(_auth.user.uid).listen((_snapshot) async {
         chats = await Future.wait(
-          _snapshot.docs.map((_d) async {
-            Map<String, dynamic> _chatData = _d.data() as Map<String, dynamic>;
-            //obtener usuarios en el chat
-            List<ChatUser> _members = [];
-            for (var _uid in _chatData["members"]) {
-              DocumentSnapshot _userSnapshot = await _db.getUser(_uid);
-              Map<String, dynamic> _userData =
-                  _userSnapshot.data() as Map<String, dynamic>;
-              _userData["uid"] = _userSnapshot.id;
-              _members.add(ChatUser.fromJson(_userData));
-            }
-            //get last Message for chat
-            List<ChatMessage> _messages = [];
-            QuerySnapshot _chatMessage = await _db.getLastMessageForChat(_d.id);
-            if (_chatMessage.docs.isNotEmpty) {
-              Map<String, dynamic> _messageData =
-                  _chatMessage.docs.first.data()! as Map<String, dynamic>;
-              ChatMessage _message = ChatMessage.fromJson(_messageData);
-              _messages.add(_message);
-              print(_message);
-            }
-            //return chat instance
-            return Chat(
+          _snapshot.docs.map(
+            (_d) async {
+              Map<String, dynamic> _chatData =
+                  _d.data() as Map<String, dynamic>;
+              //Get Users In Chat
+              List<ChatUser> _members = [];
+              for (var _uid in _chatData["members"]) {
+                DocumentSnapshot _userSnapshot = await _db.getUser(_uid);
+                Map<String, dynamic> _userData =
+                    _userSnapshot.data() as Map<String, dynamic>;
+                _userData["uid"] = _userSnapshot.id;
+                _members.add(
+                  ChatUser.fromJSON(_userData),
+                );
+              }
+              //Get Last Message For Chat
+              List<ChatMessage> _messages = [];
+              QuerySnapshot _chatMessage =
+                  await _db.getLastMessageForChat(_d.id);
+              if (_chatMessage.docs.isNotEmpty) {
+                Map<String, dynamic> _messageData =
+                    _chatMessage.docs.first.data()! as Map<String, dynamic>;
+                ChatMessage _message = ChatMessage.fromJSON(_messageData);
+                _messages.add(_message);
+              }
+              //Return Chat Instance
+              return Chat(
                 uid: _d.id,
                 currentUserUid: _auth.user.uid,
                 members: _members,
+                messages: _messages,
                 activity: _chatData["is_activity"],
                 group: _chatData["is_group"],
-                messages: _messages);
-          }).toList(),
+              );
+            },
+          ).toList(),
         );
         notifyListeners();
       });

@@ -1,61 +1,59 @@
 import 'dart:async';
 
-//packages
+//Packages
 import 'package:file_picker/file_picker.dart';
-import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
-//services
+//Services
 import '../services/database_service.dart';
 import '../services/cloud_storage_service.dart';
 import '../services/media_service.dart';
-import '../services/navigation_services.dart';
+import '../services/navigation_service.dart';
 
-//providers
+//Providers
 import '../providers/authentication_provider.dart';
 
-//models
+//Models
 import '../models/chat_message.dart';
 
 class ChatPageProvider extends ChangeNotifier {
   late DatabaseService _db;
   late CloudStorageService _storage;
   late MediaService _media;
-  late NavigationServices _navigation;
+  late NavigationService _navigation;
 
-  final AuthenticationProvider _auth;
-  final ScrollController _messagesListViewController;
+  AuthenticationProvider _auth;
+  ScrollController _messagesListViewController;
 
-  final String _chatId;
+  String _chatId;
   List<ChatMessage>? messages;
 
   late StreamSubscription _messagesStream;
+  late StreamSubscription _keyboardVisibilityStream;
+  late KeyboardVisibilityController _keyboardVisibilityController;
 
   String? _message;
 
-  String get message => _message!;
-  set message(String _value) {
-    _message = _value;
-    print(_message);
+  String get message {
+    return message;
   }
 
-  // String get message {
-  //   return message;
-  // }
-
-  // set message(String _value) {
-  //   _message = _value;
-  //   print(_message);
-  // }
+  void set message(String _value) {
+    _message = _value;
+  }
 
   ChatPageProvider(this._chatId, this._auth, this._messagesListViewController) {
     _db = GetIt.instance.get<DatabaseService>();
     _storage = GetIt.instance.get<CloudStorageService>();
     _media = GetIt.instance.get<MediaService>();
-    _navigation = GetIt.instance.get<NavigationServices>();
+    _navigation = GetIt.instance.get<NavigationService>();
+    _keyboardVisibilityController = KeyboardVisibilityController();
     listenToMessages();
+    listenToKeyboardChanges();
   }
+
   @override
   void dispose() {
     _messagesStream.cancel();
@@ -64,32 +62,49 @@ class ChatPageProvider extends ChangeNotifier {
 
   void listenToMessages() {
     try {
-      _messagesStream = _db.streamMessagesForChat(_chatId).listen((_snapshot) {
-        List<ChatMessage> _messages = _snapshot.docs.map((_m) {
-          Map<String, dynamic> _messageData = _m.data() as Map<String, dynamic>;
-          return ChatMessage.fromJson(_messageData);
-        }).toList();
-        messages = _messages;
-        print(messages);
-        notifyListeners();
-        // _messagesListViewController
-        //     .jumpTo(_messagesListViewController.position.maxScrollExtent);
-        //add scroll to bottom call
-      });
+      _messagesStream = _db.streamMessagesForChat(_chatId).listen(
+        (_snapshot) {
+          List<ChatMessage> _messages = _snapshot.docs.map(
+            (_m) {
+              Map<String, dynamic> _messageData =
+                  _m.data() as Map<String, dynamic>;
+              return ChatMessage.fromJSON(_messageData);
+            },
+          ).toList();
+          messages = _messages;
+          notifyListeners();
+          WidgetsBinding.instance.addPostFrameCallback(
+            (_) {
+              if (_messagesListViewController.hasClients) {
+                _messagesListViewController.jumpTo(
+                    _messagesListViewController.position.maxScrollExtent);
+              }
+            },
+          );
+        },
+      );
     } catch (e) {
+      print("Error getting messages.");
       print(e);
     }
   }
 
+  void listenToKeyboardChanges() {
+    _keyboardVisibilityStream = _keyboardVisibilityController.onChange.listen(
+      (_event) {
+        _db.updateChatData(_chatId, {"is_activity": _event});
+      },
+    );
+  }
+
   void sendTextMessage() {
     if (_message != null) {
-      //Entonces, dentro de nuestro botón de enviar mensaje de texto, ya sabemos que buscamos este mensaje.
-      print(_message);
       ChatMessage _messageToSend = ChatMessage(
-          senderID: _auth.user.uid,
-          type: MessageType.TEXT,
-          content: _message!,
-          sentTime: DateTime.now());
+        content: _message!,
+        type: MessageType.TEXT,
+        senderID: _auth.user.uid,
+        sentTime: DateTime.now(),
+      );
       _db.addMessageToChat(_chatId, _messageToSend);
     }
   }

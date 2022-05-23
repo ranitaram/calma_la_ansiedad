@@ -11,13 +11,14 @@ class Chat {
 
   late final List<ChatUser> _recepients;
 
-  Chat(
-      {required this.uid,
-      required this.currentUserUid,
-      required this.members,
-      required this.activity,
-      required this.group,
-      required this.messages}) {
+  Chat({
+    required this.uid,
+    required this.currentUserUid,
+    required this.members,
+    required this.messages,
+    required this.activity,
+    required this.group,
+  }) {
     _recepients = members.where((_i) => _i.uid != currentUserUid).toList();
   }
 
@@ -31,7 +32,7 @@ class Chat {
         : _recepients.map((_user) => _user.name).join(", ");
   }
 
-  String imageUrl() {
+  String imageURL() {
     return !group
         ? _recepients.first.imageURL
         : "https://e7.pngegg.com/pngimages/380/670/png-clipart-group-chat-logo-blue-area-text-symbol-metroui-apps-live-messenger-alt-2-blue-text.png";

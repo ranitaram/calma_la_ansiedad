@@ -1,43 +1,51 @@
-import 'package:calmar_la_ansiedad/models/chat_user.dart';
+//Packages
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
-//services
-import 'package:calmar_la_ansiedad/services/database_service.dart';
-import 'package:calmar_la_ansiedad/services/navigation_services.dart';
+
+//Services
+import '../services/database_service.dart';
+import '../services/navigation_service.dart';
+
+//Models
+import '../models/chat_user.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
-  late FirebaseAuth _auth;
-  late NavigationServices _navigationService;
-  late DatabaseService _databaseService;
+  late final FirebaseAuth _auth;
+  late final NavigationService _navigationService;
+  late final DatabaseService _databaseService;
 
   late ChatUser user;
 
   AuthenticationProvider() {
     _auth = FirebaseAuth.instance;
-    _navigationService = GetIt.instance.get<NavigationServices>();
+    _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
-
-    //_auth.signOut();
 
     _auth.authStateChanges().listen((_user) {
       if (_user != null) {
         _databaseService.updateUserLastSeenTime(_user.uid);
-        _databaseService.getUser(_user.uid).then((_snapshot) {
-          Map<String, dynamic> _userData =
-              _snapshot.data()! as Map<String, dynamic>;
-          user = ChatUser.fromJson({
-            "uid": _user.uid,
-            "name": _userData["name"],
-            "email": _userData["email"],
-            "last_active": _userData["last_active"],
-            "image": _userData["image"],
-          });
-          _navigationService.removeAndNavigateToRoute('/home');
-          //print(user.toMap());
-        });
+        _databaseService.getUser(_user.uid).then(
+          (_snapshot) {
+            Map<String, dynamic> _userData =
+                _snapshot.data()! as Map<String, dynamic>;
+            user = ChatUser.fromJSON(
+              {
+                "uid": _user.uid,
+                "name": _userData["name"],
+                "email": _userData["email"],
+                "last_active": _userData["last_active"],
+                "image": _userData["image"],
+              },
+            );
+            _navigationService.removeAndNavigateToRoute('/home');
+          },
+        );
       } else {
-        _navigationService.removeAndNavigateToRoute('/login');
+        if (_navigationService.getCurrentRoute() != '/login') {
+          _navigationService.removeAndNavigateToRoute('/login');
+        }
       }
     });
   }
@@ -47,9 +55,8 @@ class AuthenticationProvider extends ChangeNotifier {
     try {
       await _auth.signInWithEmailAndPassword(
           email: _email, password: _password);
-      //print(_auth.currentUser);
     } on FirebaseAuthException {
-      print('error de inicio de sesión del usuario en firebase');
+      print("Error logging user into Firebase");
     } catch (e) {
       print(e);
     }
@@ -62,7 +69,7 @@ class AuthenticationProvider extends ChangeNotifier {
           email: _email, password: _password);
       return _credentials.user!.uid;
     } on FirebaseAuthException {
-      print('Error al registrar el usuario');
+      print("Error registering user.");
     } catch (e) {
       print(e);
     }

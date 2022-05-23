@@ -1,51 +1,64 @@
 import 'package:flutter/material.dart';
-//packages
+
+//Packages
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get_it/get_it.dart';
-//services
-import 'package:calmar_la_ansiedad/services/cloud_storage_service.dart';
-import 'package:calmar_la_ansiedad/services/database_service.dart';
-import 'package:calmar_la_ansiedad/services/navigation_services.dart';
-import 'package:calmar_la_ansiedad/services/media_service.dart';
+
+//Services
+import '../services/navigation_service.dart';
+import '../services/media_service.dart';
+import '../services/cloud_storage_service.dart';
+import '../services/database_service.dart';
 
 class SplashPage extends StatefulWidget {
   final VoidCallback onInitializationComplete;
 
-  const SplashPage({Key? key, required this.onInitializationComplete})
-      : super(key: key);
+  const SplashPage({
+    required Key key,
+    required this.onInitializationComplete,
+  }) : super(key: key);
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<StatefulWidget> createState() {
+    return _SplashPageState();
+  }
 }
 
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5))
-        .then((_) => _setup().then((_) => widget.onInitializationComplete()));
+    Future.delayed(Duration(seconds: 1)).then(
+      (_) {
+        _setup().then(
+          (_) => widget.onInitializationComplete(),
+        );
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Calma la ansiedad',
+      title: 'Chatify',
       theme: ThemeData(
-        backgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
-        scaffoldBackgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
+        backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
+        scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
       ),
       home: Scaffold(
-          body: Center(
-        child: Container(
-          height: 200,
-          width: 200,
-          decoration: const BoxDecoration(
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.contain,
-                  image: AssetImage('assets/images/logo.png'))),
+                fit: BoxFit.contain,
+                image: AssetImage('assets/images/logo.png'),
+              ),
+            ),
+          ),
         ),
-      )),
+      ),
     );
   }
 
@@ -56,10 +69,17 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _registerServices() {
-    GetIt.instance.registerSingleton<NavigationServices>(NavigationServices());
-    GetIt.instance.registerSingleton<MediaService>(MediaService());
-    GetIt.instance.registerSingleton<DatabaseService>(DatabaseService());
-    GetIt.instance
-        .registerSingleton<CloudStorageService>(CloudStorageService());
+    GetIt.instance.registerSingleton<NavigationService>(
+      NavigationService(),
+    );
+    GetIt.instance.registerSingleton<MediaService>(
+      MediaService(),
+    );
+    GetIt.instance.registerSingleton<CloudStorageService>(
+      CloudStorageService(),
+    );
+    GetIt.instance.registerSingleton<DatabaseService>(
+      DatabaseService(),
+    );
   }
 }

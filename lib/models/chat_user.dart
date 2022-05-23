@@ -5,14 +5,15 @@ class ChatUser {
   final String imageURL;
   late DateTime lastActive;
 
-  ChatUser(
-      {required this.uid,
-      required this.name,
-      required this.email,
-      required this.imageURL,
-      required this.lastActive});
+  ChatUser({
+    required this.uid,
+    required this.name,
+    required this.email,
+    required this.imageURL,
+    required this.lastActive,
+  });
 
-  factory ChatUser.fromJson(Map<String, dynamic> _json) {
+  factory ChatUser.fromJSON(Map<String, dynamic> _json) {
     return ChatUser(
       uid: _json["uid"],
       name: _json["name"],
@@ -36,6 +37,6 @@ class ChatUser {
   }
 
   bool wasRecentlyActive() {
-    return DateTime.now().difference(lastActive).inHours < 1;
+    return DateTime.now().difference(lastActive).inHours < 2;
   }
 }
