@@ -23,6 +23,8 @@ class AuthenticationProvider extends ChangeNotifier {
     _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
 
+    //“_auth.signOut();
+
     _auth.authStateChanges().listen((_user) {
       if (_user != null) {
         _databaseService.updateUserLastSeenTime(_user.uid);

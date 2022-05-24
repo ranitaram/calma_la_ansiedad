@@ -106,7 +106,7 @@ class _ChatsPageState extends State<ChatsPage> {
           } else {
             return Center(
               child: Text(
-                "No Chats Found.",
+                "Chats no encontrados.",
                 style: TextStyle(color: Colors.white),
               ),
             );

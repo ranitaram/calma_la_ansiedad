@@ -1,4 +1,5 @@
 //Packages
+import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
 import 'package:flutter/material.dart';
 
 //Pages
@@ -14,10 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentPage = 0;
-  final List<Widget> _pages = [
-    ChatsPage(),
-    UsersPage(),
-  ];
+  final List<Widget> _pages = [ChatsPage(), UsersPage(), TranquilidadPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: _pages[_currentPage],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 24, 72, 87),
         currentIndex: _currentPage,
         onTap: (_index) {
           setState(() {
@@ -38,15 +37,30 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             label: "Chats",
             icon: Icon(
-              Icons.chat_bubble_sharp,
+              Icons.chat_rounded,
+              // size: 14,
             ),
           ),
           BottomNavigationBarItem(
             label: "Users",
             icon: Icon(
               Icons.supervised_user_circle_sharp,
+              // size: 14,
             ),
           ),
+          BottomNavigationBarItem(
+            label: "Tranquilidad",
+            icon: Icon(
+              Icons.sunny,
+              // size: 14,
+            ),
+          ),
+          // BottomNavigationBarItem(
+          //   label: "Desafíos",
+          //   icon: Icon(
+          //     Icons.checklist_sharp,
+          //   ),
+          // ),
         ],
       ),
     );

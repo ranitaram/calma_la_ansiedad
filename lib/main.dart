@@ -41,7 +41,8 @@ class MainApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Chatify',
+        debugShowCheckedModeBanner: false,
+        title: 'Calma la ansiedad',
         theme: ThemeData(
           backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
           scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
