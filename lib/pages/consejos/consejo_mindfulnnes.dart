@@ -1,16 +1,15 @@
 import 'package:calmar_la_ansiedad/widgets/Boton_ejercicio.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:lottie/lottie.dart';
 
 import '../../widgets/boton_gordo.dart';
 
-class ConsejoRespiracion extends StatefulWidget {
+class ConsejoMindfulness extends StatefulWidget {
   @override
-  State<ConsejoRespiracion> createState() => _ConsejoRespiracionState();
+  State<ConsejoMindfulness> createState() => _ConsejoMindfulnessState();
 }
 
-class _ConsejoRespiracionState extends State<ConsejoRespiracion> {
+class _ConsejoMindfulnessState extends State<ConsejoMindfulness> {
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -34,35 +33,50 @@ class _ConsejoRespiracionState extends State<ConsejoRespiracion> {
           controller: PageController(viewportFraction: 0.6),
           scrollDirection: Axis.vertical,
           children: [
-            Center(child: Lottie.asset('assets/images/respira.json')),
             BotonEjercicio(
-                icon: FontAwesomeIcons.universalAccess,
+                icon: FontAwesomeIcons.brain,
                 texto:
-                    'Si bien la hiperventilación es un síntoma de ataque de pánico que puede aumentar el miedo, respirar profundamente puede reducir los síntomas de pánico durante un ataque.',
+                    'La conciencia plena puede ayudarte a conectarte con la realidad que te rodea. Dado que los ataques de pánico pueden causar un sentimiento de desapego o',
                 colorText: Colors.black,
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             BotonEjercicio(
-                icon: FontAwesomeIcons.universalAccess,
+                icon: FontAwesomeIcons.brain,
                 texto:
-                    'Si puedes controlar tu respiración, es menos probable que te hiperventiles ya que esto puede empeorar otros síntomas, incluyendo el ataque de pánico.',
+                    'separación de la realidad, esto puede combatir un ataque de pánico a medida que se acerca o cuándo realmente ocurre.',
                 colorText: Colors.black,
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             BotonEjercicio(
-                icon: FontAwesomeIcons.universalAccess,
+                icon: FontAwesomeIcons.brain,
                 texto:
-                    'Concéntrate en inhalar y exhalar por la boca, sintiendo cómo el aire llena lentamente tu pecho y abdomen,',
+                    'Concéntrate en las sensaciones físicas con las que estás familiarizado, como hundir los pies en el suelo o sentir la textura de tus jeans en las manos.',
                 colorText: Colors.black,
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             BotonEjercicio(
-                icon: FontAwesomeIcons.universalAccess,
+                icon: FontAwesomeIcons.brain,
                 texto:
-                    'y luego expúlsalo lentamente. Inhala contando hasta cuatro, mantén el aire por un segundo y luego exhala contando hasta cuatro.',
+                    'Estas sensaciones específicas te ubican firmemente en la realidad y te dan un objetivo en el cual concentrarte.',
+                colorText: Colors.black,
+                color1: const Color.fromARGB(255, 55, 199, 228),
+                color2: const Color.fromARGB(255, 136, 171, 155),
+                onpress: () {}),
+            BotonEjercicio(
+                icon: FontAwesomeIcons.brain,
+                texto:
+                    'Regresa a la sección de desafíos y empieza uno, para comenzar a trabajar el estar presente y concentrarte con la realidad que te rodea,',
+                colorText: Colors.black,
+                color1: const Color.fromARGB(255, 55, 199, 228),
+                color2: const Color.fromARGB(255, 136, 171, 155),
+                onpress: () {}),
+            BotonEjercicio(
+                icon: FontAwesomeIcons.brain,
+                texto:
+                    'te recomendamos ir en orden, ya que conforme avanzan los desafíos algunos dependen que tengas dominados los primeros.',
                 colorText: Colors.black,
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),

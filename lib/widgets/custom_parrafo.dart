@@ -17,7 +17,7 @@ class Parrafo extends StatelessWidget {
     _deviceWidth = MediaQuery.of(context).size.width;
     return Container(
         padding: const EdgeInsets.only(top: 3),
-        height: _deviceHeight * 0.20,
+        height: _deviceHeight * 0.18,
         width: _deviceWidth * 0.03,
         child: Text(
           _parrafo,

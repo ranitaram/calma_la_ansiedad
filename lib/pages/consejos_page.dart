@@ -1,3 +1,4 @@
+import 'package:calmar_la_ansiedad/pages/consejos/consejo_mindfulnnes.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_respiracion.dart';
 import 'package:calmar_la_ansiedad/widgets/boton_gordo.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
@@ -64,7 +65,9 @@ class _ConsejosPageState extends State<ConsejosPage> {
             ),
             _titulo(),
             Parrafo(
-                'Los ataques de pánico son oleadas repentinas e intensas de miedo, pánico o ansiedad. Son abrumadores y sus síntomas pueden ser tanto físicos como emocionales.'),
+                'Los ataques de pánico son oleadas repentinas e intensas de miedo,'),
+            Parrafo(
+                'pánico o ansiedad. Son abrumadores y sus síntomas pueden ser tanto físicos como emocionales.'),
             BotonGordo(
                 icon: FontAwesomeIcons.universalAccess,
                 texto: 'Usa la respiración profunda 3 veces',
@@ -77,17 +80,26 @@ class _ConsejosPageState extends State<ConsejosPage> {
                           builder: (context) => ConsejoRespiracion()));
                 }),
             Parrafo(
-                'Muchas personas con ataques de pánico pueden presentar dificultad para respirar, sudan profusamente, tiemblan y sienten el latido de su corazón.'),
+                'Muchas personas con ataques de pánico pueden presentar dificultad para respirar,'),
+            Parrafo(
+                'sudan profusamente, tiemblan y sienten el latido de su corazón.'),
             BotonGordo(
                 icon: FontAwesomeIcons.brain,
                 texto: 'Practica la conciencia plena Mindfulness',
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
-                onpress: () {}),
+                onpress: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ConsejoMindfulness()));
+                }),
             Parrafo(
-                'Algunas personas llegan a sentir dolor en el pecho y una sensación de desapego de la realidad o de sí mismas durante un ataque de pánico,'),
+                'Algunas personas llegan a sentir dolor en el pecho y una sensación de desapego de la realidad'),
+            Parrafo('o de sí mismas durante un ataque de pánico,'),
             Parrafo(
-                'que les hace pensar que están teniendo un ataque al corazón. Otros han reportado sentirse como si estuvieran teniendo un accidente cerebrovascular.'),
+                'que les hace pensar que están teniendo un ataque al corazón. Otros han reportado sentirse como'),
+            Parrafo('si estuvieran teniendo un accidente cerebrovascular.'),
             BotonGordo(
                 icon: FontAwesomeIcons.eyeSlash,
                 texto: 'Cierra los ojos',
@@ -95,11 +107,13 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             Parrafo(
-                'Una crisis de angustia o ataque de pánico consiste en la aparición repentina, habitualmente en menos de 10 minutos, de una sensación incontrolable de malestar'),
-            const SizedBox(height: 15),
+                'Una crisis de angustia o ataque de pánico consiste en la aparición repentina,'),
             Parrafo(
-                'o terror, con frecuencia asociada a una idea de catástrofe inminente (sensación de muerte, de estar volviéndose loco o de estar perdiendo el control),'),
-            const SizedBox(height: 15),
+                'habitualmente en menos de 10 minutos, de una sensación incontrolable de malestar o terror,'),
+            Parrafo(
+                'con frecuencia asociada a una idea de catástrofe inminente,'),
+            Parrafo(
+                '(sensación de muerte, de estar volviéndose loco o de estar perdiendo el control)'),
             BotonGordo(
                 icon: FontAwesomeIcons.personRunning,
                 texto: 'Haz ejercicios ligeros',
@@ -107,9 +121,13 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             Parrafo(
-                'Sus causas se desconocen aunque se ha demostrado un componente genético importante. Parece que está implicada una libración'),
+                'Sus causas se desconocen aunque se ha demostrado un componente genético importante.'),
             Parrafo(
-                'exagerada de catecolaminas (sustancias que favorecen el nerviosismo, el temblor, la taquicardia y la agitación) ante determinados estímulos.'),
+                'Parece que está implicada una libración exagerada de catecolaminas'),
+            Parrafo(
+                '(sustancias que favorecen el nerviosismo, el temblor, la taquicardia y la '),
+            Parrafo(
+                'agitación) ante determinados estímulos. Usted puede, reducir la cantidad de estrés,'),
             BotonGordo(
                 icon: FontAwesomeIcons.leaf,
                 texto: 'Menta',
@@ -117,7 +135,7 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             Parrafo(
-                'Usted puede, reducir la cantidad de estrés, evitar que la situación empeore y ayudar a poner un poco de control en una situación confusa.'),
+                'evitar que la situación empeore y ayudar a poner un poco de control en una situación confusa.'),
             BotonGordo(
                 icon: FontAwesomeIcons.recycle,
                 texto: 'Repite un mantra internamente',
@@ -125,10 +143,14 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
             Parrafo(
-                'Cuando una persona está teniendo un ataque de pánico, es útil decirle cosas como las siguientes: "Puedes superarlo". "Estoy orgulloso de ti. Buen trabajo".'),
+                'Cuando una persona está teniendo un ataque de pánico, es útil decirle cosas como las siguientes:'),
+            Parrafo(
+                '"Puedes superarlo". "Estoy orgulloso de ti. Buen trabajo" "Dime qué necesitas ahora".'),
             const SizedBox(height: 15),
             Parrafo(
-                '"Concéntrate en tu respiración. Mantente en el presente". "No es el lugar lo que te está causando las molestias; son tus pensamientos".'),
+                '"Concéntrate en tu respiración. Mantente en el presente". "No es el lugar lo que te está causando.'),
+            Parrafo(
+                'las molestias; son tus pensamientos" "Lo que sientes es atemorizante, pero no es peligroso".'),
             BotonGordo(
                 icon: FontAwesomeIcons.wandMagicSparkles,
                 texto: 'Imagina tu lugar feliz',
