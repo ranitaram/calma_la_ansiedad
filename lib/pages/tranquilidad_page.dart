@@ -1,3 +1,5 @@
+import 'package:calmar_la_ansiedad/pages/consejos_page.dart';
+import 'package:calmar_la_ansiedad/pages/desafios_page.dart';
 import 'package:calmar_la_ansiedad/widgets/boton_gordo.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,11 +32,11 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
           create: (_) => ChatsPageProvider(_auth),
         ),
       ],
-      child: builUI(),
+      child: _builUI(),
     );
   }
 
-  builUI() {
+  _builUI() {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: _deviceWidth * 0.03,
@@ -73,7 +75,11 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
         texto: 'Consejos para detener un ataque de pánico',
         color1: const Color.fromRGBO(0, 136, 249, 1.0),
         color2: const Color.fromRGBO(0, 82, 218, 1.0),
-        onpress: () {});
+        onpress: () {
+          // Navigator.pushNamed(context, 'consejo');
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ConsejosPage()));
+        });
   }
 
   _imagenlottie() {
@@ -88,6 +94,9 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
         texto: 'Desafíos Mindfulnnes',
         color1: const Color.fromRGBO(0, 136, 249, 1.0),
         color2: const Color.fromRGBO(0, 82, 218, 1.0),
-        onpress: () {});
+        onpress: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => DesafiosPage()));
+        });
   }
 }

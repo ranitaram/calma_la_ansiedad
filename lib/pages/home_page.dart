@@ -55,12 +55,6 @@ class _HomePageState extends State<HomePage> {
               // size: 14,
             ),
           ),
-          // BottomNavigationBarItem(
-          //   label: "Desafíos",
-          //   icon: Icon(
-          //     Icons.checklist_sharp,
-          //   ),
-          // ),
         ],
       ),
     );

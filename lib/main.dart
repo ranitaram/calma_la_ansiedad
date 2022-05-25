@@ -1,3 +1,4 @@
+import 'package:calmar_la_ansiedad/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 //Packages
@@ -41,23 +42,24 @@ class MainApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Calma la ansiedad',
-        theme: ThemeData(
-          backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
-          scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+          debugShowCheckedModeBanner: false,
+          title: 'Calma la ansiedad',
+          theme: ThemeData(
+            backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
+            scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
+            bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
+            ),
           ),
-        ),
-        navigatorKey: NavigationService.navigatorKey,
-        initialRoute: '/login',
-        routes: {
-          '/login': (BuildContext _context) => LoginPage(),
-          '/register': (BuildContext _context) => RegisterPage(),
-          '/home': (BuildContext _context) => HomePage(),
-        },
-      ),
+          navigatorKey: NavigationService.navigatorKey,
+          initialRoute: '/login',
+          routes: routes
+          // {
+          //   '/login': (BuildContext _context) => LoginPage(),
+          //   '/register': (BuildContext _context) => RegisterPage(),
+          //   '/home': (BuildContext _context) => HomePage(),
+          // },
+          ),
     );
   }
 }

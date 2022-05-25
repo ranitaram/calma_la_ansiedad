@@ -77,8 +77,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget _pageTitle() {
     return Container(
       height: _deviceHeight * 0.10,
-      child: Text(
-        'Chatify',
+      child: const Text(
+        'Calma la ansiedad',
         style: TextStyle(
           color: Colors.white,
           fontSize: 40,
@@ -141,8 +141,8 @@ class _LoginPageState extends State<LoginPage> {
     return GestureDetector(
       onTap: () => _navigation.navigateToRoute('/register'),
       child: Container(
-        child: Text(
-          'Don\'t have an account?',
+        child: const Text(
+          '¿No tienes una cuenta?',
           style: TextStyle(
             color: Colors.blueAccent,
           ),
