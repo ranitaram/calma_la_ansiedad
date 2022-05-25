@@ -1,3 +1,4 @@
+import 'package:calmar_la_ansiedad/pages/consejos/consejo_respiracion.dart';
 import 'package:calmar_la_ansiedad/widgets/boton_gordo.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:calmar_la_ansiedad/widgets/top_bar.dart';
@@ -69,7 +70,12 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 texto: 'Usa la respiración profunda 3 veces',
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
-                onpress: () {}),
+                onpress: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ConsejoRespiracion()));
+                }),
             Parrafo(
                 'Muchas personas con ataques de pánico pueden presentar dificultad para respirar, sudan profusamente, tiemblan y sienten el latido de su corazón.'),
             BotonGordo(
