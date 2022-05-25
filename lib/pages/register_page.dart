@@ -133,7 +133,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   });
                 },
                 regEx: r'.{6,}',
-                hintText: "Name",
+                hintText: "Nombre",
                 obscureText: false),
             CustomTextFormField(
                 onSaved: (_value) {
@@ -152,7 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   });
                 },
                 regEx: r".{6,}",
-                hintText: "Password",
+                hintText: "Contraseña",
                 obscureText: true),
           ],
         ),
@@ -162,8 +162,8 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget _registerButton() {
     return RoundedButton(
-      name: "Register",
-      height: _deviceHeight * 0.065,
+      name: "Registro",
+      height: _deviceHeight * 0.075,
       width: _deviceWidth * 0.65,
       onPressed: () async {
         if (_registerFormKey.currentState!.validate() &&

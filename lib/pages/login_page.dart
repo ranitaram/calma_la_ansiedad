@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
         'Calma la ansiedad',
         style: TextStyle(
           color: Colors.white,
-          fontSize: 40,
+          fontSize: 32,
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _loginForm() {
     return Container(
-      height: _deviceHeight * 0.18,
+      height: _deviceHeight * 0.25,
       child: Form(
         key: _loginFormKey,
         child: Column(
@@ -98,25 +98,29 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomTextFormField(
-                onSaved: (_value) {
-                  setState(() {
-                    _email = _value;
-                  });
-                },
-                regEx:
-                    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-                hintText: "Email",
-                obscureText: false),
-            CustomTextFormField(
-                onSaved: (_value) {
-                  setState(() {
-                    _password = _value;
-                  });
-                },
-                regEx: r".{6,}",
-                hintText: "Password",
-                obscureText: true),
+            Expanded(
+              child: CustomTextFormField(
+                  onSaved: (_value) {
+                    setState(() {
+                      _email = _value;
+                    });
+                  },
+                  regEx:
+                      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+                  hintText: "Email",
+                  obscureText: false),
+            ),
+            Expanded(
+              child: CustomTextFormField(
+                  onSaved: (_value) {
+                    setState(() {
+                      _password = _value;
+                    });
+                  },
+                  regEx: r".{6,}",
+                  hintText: "Contraseña",
+                  obscureText: true),
+            )
           ],
         ),
       ),
@@ -125,8 +129,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _loginButton() {
     return RoundedButton(
-      name: "Login",
-      height: _deviceHeight * 0.065,
+      name: "Acceso",
+      height: _deviceHeight * 0.075,
       width: _deviceWidth * 0.65,
       onPressed: () {
         if (_loginFormKey.currentState!.validate()) {
