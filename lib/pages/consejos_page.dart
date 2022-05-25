@@ -1,5 +1,7 @@
 import 'package:calmar_la_ansiedad/pages/consejos/conejo_ojos.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_ejercicios.dart';
+import 'package:calmar_la_ansiedad/pages/consejos/consejo_imagina.dart';
+import 'package:calmar_la_ansiedad/pages/consejos/consejo_mantra.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_menta.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_mindfulnnes.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_respiracion.dart';
@@ -155,7 +157,10 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 texto: 'Repite un mantra internamente',
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
-                onpress: () {}),
+                onpress: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ConsejoMantra()));
+                }),
             Parrafo(
                 'Cuando una persona está teniendo un ataque de pánico, es útil decirle cosas como las siguientes:'),
             Parrafo(
@@ -170,7 +175,12 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 texto: 'Imagina tu lugar feliz',
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
-                onpress: () {}),
+                onpress: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ConsejoImagina()));
+                }),
             BotonGordo(
                 icon: FontAwesomeIcons.arrowLeftLong,
                 texto: 'Regresar',
