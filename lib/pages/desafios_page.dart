@@ -63,7 +63,9 @@ class _DesafiosPageState extends State<DesafiosPage> {
             ),
             _titulo(),
             Parrafo(
-                'Te recomendamos hacer un desafío por semana ó hasta que se convierta en un hábito, una vez que forme parte de tu vida puedes hacer otro desafío. Es importante hacerlo en orden.'),
+                'Te recomendamos hacer un desafío por semana ó hasta que se convierta en un hábito,'),
+            Parrafo(
+                'una vez que forme parte de tu vida puedes hacer otro desafío. Es importante hacerlo en orden.'),
             BotonGordo(
               texto: 'Desafío 1: Usa tu mano menos capaz',
               onpress: () {

@@ -1,3 +1,4 @@
+import 'package:calmar_la_ansiedad/pages/consejos/conejo_ojos.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_mindfulnnes.dart';
 import 'package:calmar_la_ansiedad/pages/consejos/consejo_respiracion.dart';
 import 'package:calmar_la_ansiedad/widgets/boton_gordo.dart';
@@ -105,7 +106,10 @@ class _ConsejosPageState extends State<ConsejosPage> {
                 texto: 'Cierra los ojos',
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
-                onpress: () {}),
+                onpress: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ConsejoOjos()));
+                }),
             Parrafo(
                 'Una crisis de angustia o ataque de pánico consiste en la aparición repentina,'),
             Parrafo(
