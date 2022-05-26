@@ -78,7 +78,7 @@ class _Descubrimiento2State extends State<Descubrimiento2> {
             ),
             const SizedBox(height: 15),
             Parrafo(
-              'El desafío pone en foco a nuestra tendencia a ser perezosos, a menudo dejamos líos para que otros lo limpien,',
+              'El desafío pone en foco a nuestra tendencia a ser perezosos, a menudo dejamos líos para que otros limpien,',
               color: Colors.black,
             ),
             Parrafo(

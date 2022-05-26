@@ -83,7 +83,7 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
 
   _imagenlottie() {
     return Center(
-      child: Lottie.asset('assets/images/scaning.json'),
+      child: Lottie.asset('assets/images/inteligencia.json'),
     );
   }
 

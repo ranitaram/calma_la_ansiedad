@@ -1,5 +1,6 @@
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_1.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_2.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';
@@ -94,10 +95,8 @@ class _DesafiosPageState extends State<DesafiosPage> {
                 color1: Colors.amber,
                 color2: Colors.brown,
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => Desafio3Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Desafio3()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.handHoldingHeart,
