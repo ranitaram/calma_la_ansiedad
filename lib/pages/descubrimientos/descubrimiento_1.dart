@@ -69,8 +69,7 @@ class _Descubrimiento1State extends State<Descubrimiento1> {
                 color1: const Color.fromARGB(255, 34, 210, 183),
                 color2: const Color.fromARGB(255, 12, 85, 52),
                 onpress: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DesafiosPage()));
+                  Navigator.pushNamed(context, '/home');
                 }),
           ],
         ),
