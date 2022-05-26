@@ -58,47 +58,47 @@ class _Descubrimiento10State extends State<Descubrimiento10> {
             ),
             ParrafoGrande(
               'Casi todos tomamos el teléfono de inmediato cuando empieza a sonar y respondemos lo más pronto posible, es muy difícil al comienzo detener este hábito, hacer una pausa y respirar.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             ParrafoGrande(
               'Realizar unas respiraciones cuando el teléfono suena es un nuevo hábito muy práctico, en especial si tu trabajo requiere hablar con personas difíciles, pero con la práctica de la respiración antes de contestar la llamada te',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'ayuda a vaciar tu mente y prepararla para brindarle toda tu atención de una manera relajada y consiente a la persona que te está llamando. Esta es una tarea poderosa porque invoca a una repentina inmovilidad en el cuerpo y a una',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 10,
             ),
             ParrafoGrande(
               'repentina inmovilidad en el alma al mismo tiempo. Cuando nos movemos, habitualmente estamos pensando. Cuando el cuerpo se detiene, un nivel sutil del pensamiento en curso se revela. Esto ayuda a soltar la tensión mental, mientras que disfrutar de 3 ',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'respiraciones, ayuda a liberar la tensión física. Gran parte de nuestra vida es vivida inconscientemente y con prisa, en lugar de vivir plenamente en este momento, siempre estamos yendo hacia adelante,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             ParrafoGrande(
               'atrapando el minuto siguiente, la hora siguiente, el día siguiente. Arrastramos nuestro estado mental como una bolsa de basura, de un encuentro al siguiente. Si acabamos de colgar después de una llamada difícil,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'es probable que estemos malhumorados con la desventurada persona que llama después. Esta es una habilidad sumamente útil, que la mayoría de la gente no tiene. Nos permite hacer que se desvanezcan los hábitos viejos y',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'dañinos mientras cultivamos los nuevos y saludables.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.phone,

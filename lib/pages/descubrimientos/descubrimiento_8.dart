@@ -58,48 +58,48 @@ class _Descubrimiento8State extends State<Descubrimiento8> {
             ),
             ParrafoGrande(
               'Para este desafío las personas suelen pensar que les costara mucho trabajo hacer la lista, por lo que está agradecido, pero se sorprenden al ver que una vez que empiezan, la lista frecuentemente se hace más larga.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'Se ha comprobado que las personas que hacen con regularidad una lista, por lo que está agradecido día a día, muestran un aumento significativo en su nivel de felicidad y una disminución en la de depresión.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             ParrafoGrande(
               'Hay que cultivar la mente dejando que las emociones y los pensamientos no saludables desaparezcan mientras se fortalecen los saludables; Puede parecer artificial al principio, pero cuando cultivamos deliberadamente la gratitud,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'poco a poco nos convertimos en personas naturalmente agradecidas o de lo contrario si cultivamos estados mentales negativos, como la envidia o critica, estos se convertirán en lo que somos.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'La mente imagina cosas horribles que podrían ocurrir en el futuro; Nuestra mente parece estar atraída a los estados negativos, arrastra recuerdos difíciles una y otra vez,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             ParrafoGrande(
               'como si intentara cambiar el resultado, pero el pasado ya fue y no se puede cambiar el resultado, lo que podemos es cambiar nosotros mismos y solo lo podremos hacer estando conscientemente en el presente.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             ParrafoGrande(
               'La práctica de este reto es una forma muy poderosa para empezar a eliminar el estado mental negativo y de desastres y nos ayuda a sacar la luz los muchos sucesos positivos que pasaron en el día.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'La gente que practica la gratitud al final del día con regularidad, descubre que se vuelve capaz de ver el',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'lado positivo de casi cualquier evento en su vida.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.jenkins,

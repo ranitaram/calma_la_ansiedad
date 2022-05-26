@@ -60,18 +60,18 @@ class _Desafio10State extends State<Desafio10> {
             // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Cuando escuches el teléfono que suena, deja lo que estás haciendo y realiza 3 respiraciones para asentar a mente antes de responder. Si tu trabajo requiere de contestar llamadas continuamente puedes acortar esto a unas 2 respiraciones.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 20,
             ),
             ParrafoGrande(
               'El objetivo de esto es hacer una pausa y hacer una respiración profunda, tranquilizadora, antes de responder la llamada. Si recibes pocas llamas al día pon una alarma que suene varias veces al día cada 90 minutos,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'por ejemplo, cuando suene, detente y respira.',
-              color: Colors.black,
+              color: Colors.white,
             ),
 
             // Parrafo(

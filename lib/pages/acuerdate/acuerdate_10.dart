@@ -63,7 +63,7 @@ class _Acuerdate10State extends State<Acuerdate10> {
             // ),
             Parrafo(
               'Coloca una pequeña etiqueta en tu teléfono que diga respira',
-              color: Colors.black,
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.phone,

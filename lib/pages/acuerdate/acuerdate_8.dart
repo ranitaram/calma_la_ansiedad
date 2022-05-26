@@ -58,7 +58,7 @@ class _Acuerdate8State extends State<Acuerdate8> {
             ),
             ParrafoGrande(
               'Deja una libreta a un lado de tu almohada para que cuando vayas a irte a dormir la veas y hagas tu lista antes de quedarte dormido.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             // Parrafo(
             //   'toma conciencia de los efectos que brinda haberle hecho un cumplido sincero y como te sientes al respecto.',
