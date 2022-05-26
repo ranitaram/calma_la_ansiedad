@@ -1,5 +1,6 @@
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_1.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_10.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_11.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_2.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_4.dart';
@@ -169,15 +170,13 @@ class _DesafiosPageState extends State<DesafiosPage> {
                       MaterialPageRoute(builder: (contex) => Desafio10()));
                 }),
             BotonGordo(
-                icon: FontAwesomeIcons.prayingHands,
+                icon: FontAwesomeIcons.handsPraying,
                 texto: 'Desafío 11: Toca con cariño',
                 color1: const Color.fromARGB(255, 74, 228, 74),
                 color2: const Color.fromARGB(255, 244, 31, 16),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio11Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio11()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.stopwatch,
