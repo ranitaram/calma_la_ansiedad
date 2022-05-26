@@ -72,8 +72,8 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
     return BotonGordo(
         icon: FontAwesomeIcons.personMilitaryPointing,
         texto: 'Consejos para detener un ataque de pánico',
-        color1: const Color.fromRGBO(0, 136, 249, 1.0),
-        color2: const Color.fromRGBO(0, 82, 218, 1.0),
+        color1: const Color.fromARGB(255, 2, 71, 128),
+        color2: const Color.fromARGB(255, 81, 8, 182),
         onpress: () {
           // Navigator.pushNamed(context, 'consejo');
           Navigator.push(
@@ -91,8 +91,8 @@ class _TranquilidadPageState extends State<TranquilidadPage> {
     return BotonGordo(
         icon: FontAwesomeIcons.userSecret,
         texto: 'Desafíos Mindfulnnes',
-        color1: const Color.fromRGBO(0, 136, 249, 1.0),
-        color2: const Color.fromRGBO(0, 82, 218, 1.0),
+        color1: const Color.fromARGB(255, 1, 9, 16),
+        color2: const Color.fromARGB(255, 78, 6, 114),
         onpress: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => DesafiosPage()));
