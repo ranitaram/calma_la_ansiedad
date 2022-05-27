@@ -7,6 +7,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_15.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_16.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_17.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_18.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_19.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_2.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_4.dart';
@@ -251,13 +252,11 @@ class _DesafiosPageState extends State<DesafiosPage> {
             BotonGordo(
                 icon: FontAwesomeIcons.handSparkles,
                 texto: 'Desafío 19: Reposa tus manos',
-                color1: const Color.fromARGB(255, 28, 41, 24),
+                color1: const Color.fromARGB(255, 161, 81, 236),
                 color2: const Color.fromARGB(255, 204, 235, 5),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio19Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio19()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.stripeS,
