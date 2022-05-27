@@ -9,6 +9,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_17.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_18.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_19.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_2.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_20.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_4.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_5.dart';
@@ -264,10 +265,8 @@ class _DesafiosPageState extends State<DesafiosPage> {
                 color1: const Color.fromARGB(255, 29, 162, 115),
                 color2: const Color.fromARGB(255, 118, 56, 138),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio20Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio20()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.bold,
