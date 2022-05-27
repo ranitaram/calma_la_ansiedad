@@ -4,6 +4,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_11.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_12.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_13.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_15.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_16.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_2.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_4.dart';
@@ -12,7 +13,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_6.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_7.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_8.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_9.dart';
-import 'package:calmar_la_ansiedad/pages/desafios/desafo_14.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_14.dart';
 import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';
@@ -221,13 +222,11 @@ class _DesafiosPageState extends State<DesafiosPage> {
             BotonGordo(
                 icon: FontAwesomeIcons.lungs,
                 texto: 'Desafío 16: Respira',
-                color1: const Color.fromARGB(255, 237, 114, 7),
+                color1: const Color.fromARGB(255, 126, 76, 31),
                 color2: const Color.fromARGB(255, 12, 199, 187),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio16Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio16()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.doorOpen,
