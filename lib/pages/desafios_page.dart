@@ -22,6 +22,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_29.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_3.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_30.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_31.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_32.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_4.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_5.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_6.dart';
@@ -379,15 +380,13 @@ class _DesafiosPageState extends State<DesafiosPage> {
                       MaterialPageRoute(builder: (contex) => Desafio31()));
                 }),
             BotonGordo(
-                icon: FontAwesomeIcons.theaterMasks,
+                icon: FontAwesomeIcons.masksTheater,
                 texto: 'Desafío 32: Esa persona Podría morir',
-                color1: const Color.fromARGB(255, 193, 188, 187),
-                color2: const Color.fromARGB(255, 235, 229, 39),
+                color1: Color.fromARGB(255, 29, 29, 29),
+                color2: Color.fromARGB(255, 67, 67, 63),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio32Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio32()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.cloudSunRain,
