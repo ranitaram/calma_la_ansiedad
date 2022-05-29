@@ -142,7 +142,7 @@ class _ChatPageState extends State<ChatPage> {
         return Align(
           alignment: Alignment.center,
           child: Text(
-            "Be the first to say Hi!",
+            "Sé el primero en decir Hola!",
             style: TextStyle(color: Colors.white),
           ),
         );

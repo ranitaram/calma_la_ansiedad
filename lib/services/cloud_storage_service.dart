@@ -15,8 +15,15 @@ class CloudStorageService {
   Future<String?> saveUserImageToStorage(
       String _uid, PlatformFile _file) async {
     try {
+      //Lo primero que tengo que hacer es que tengo que obtener una referencia a la ubicación y donde quiero almacenar mi imagen.
+      //tengo la carpeta UID para este usuario específico dentro de la cual tendrá la imagen de perfil seguida de su extensión
+
       Reference _ref =
           _storage.ref().child('images/users/$_uid/profile.${_file.extension}');
+      // Entonces, ahora que tenemos una referencia, lo que podemos hacer es que ahora podemos crear una tarea o una operación que puede cargar por defecto para nosotros.
+      /* Para eso, lo que haré es crear una nueva variable, que será y el tipo de tarea de carga nombrará una tarea, y la estableceré igual a nuestro archivo de puntos de referencia.
+          Entonces, lo que esto va a hacer es que, sea cual sea la dirección especificada que hayamos especificado, tomará el archivo que le demos y lo cargará en el bosque o en el almacenamiento. Así que voy a enviar el archivo allí.  */
+
       UploadTask _task = _ref.putFile(
         File(_file.path),
       );
