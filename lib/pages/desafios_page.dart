@@ -35,6 +35,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_40.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_41.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_42.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_43.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_44.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_5.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_6.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_7.dart';
@@ -499,15 +500,13 @@ class _DesafiosPageState extends State<DesafiosPage> {
                       MaterialPageRoute(builder: (contex) => Desafio43()));
                 }),
             BotonGordo(
-                icon: FontAwesomeIcons.tired,
+                icon: FontAwesomeIcons.faceTired,
                 texto: 'Desafío 44: Ávido',
                 color1: const Color.fromARGB(255, 154, 162, 167),
                 color2: const Color.fromARGB(255, 225, 18, 149),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio44Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio44()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.sadCry,
