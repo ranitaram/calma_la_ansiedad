@@ -77,8 +77,9 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
             _registerButton(),
             SizedBox(
-              height: _deviceHeight * 0.02,
+              height: _deviceHeight * 0.03,
             ),
+            _iralLogin()
           ],
         ),
       ),
@@ -178,6 +179,18 @@ class _RegisterPageState extends State<RegisterPage> {
           await _auth.loginUsingEmailAndPassword(_email!, _password!);
         }
       },
+    );
+  }
+
+  _iralLogin() {
+    return GestureDetector(
+      onTap: () => _navigation.navigateToRoute('/login'),
+      child: Container(
+        child: const Text(
+          '¿Ya tienes una cuenta?',
+          style: TextStyle(color: Colors.blueAccent),
+        ),
+      ),
     );
   }
 }
