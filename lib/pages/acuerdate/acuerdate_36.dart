@@ -1,5 +1,4 @@
-import 'package:calmar_la_ansiedad/pages/descubrimientos/descubrimiento_34.dart';
-
+import 'package:calmar_la_ansiedad/pages/descubrimientos/descubrimiento_36.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -9,12 +8,12 @@ import '../../widgets/custom_parrafo.dart';
 import '../../widgets/parrafo_grande.dart';
 import '../../widgets/top_bar.dart';
 
-class Acuerdate34 extends StatefulWidget {
+class Acuerdate36 extends StatefulWidget {
   @override
-  State<Acuerdate34> createState() => _Acuerdate34State();
+  State<Acuerdate36> createState() => _Acuerdate36State();
 }
 
-class _Acuerdate34State extends State<Acuerdate34> {
+class _Acuerdate36State extends State<Acuerdate36> {
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -39,8 +38,8 @@ class _Acuerdate34State extends State<Acuerdate34> {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-              Color.fromARGB(255, 38, 199, 162),
-              Color.fromARGB(255, 37, 87, 162),
+              Color.fromARGB(255, 255, 176, 7),
+              Color.fromARGB(255, 189, 36, 2),
             ])),
         child: ListView(
           // controller: PageController(viewportFraction: 0.8),
@@ -60,11 +59,11 @@ class _Acuerdate34State extends State<Acuerdate34> {
               ),
             ),
             ParrafoGrande(
-              'Coloca notas con la palabra “Tierra” o imágenes del planeta en lugares adecuados de tu ambiente. También podrías poner un poco de arena o tierra en un plato pequeño en tu escritorio, tu buró, o la mesa del comedor.',
-              color: Colors.black,
+              'Coloca notas en tu ambiente con la pregunta: “¿Estoy ignorando?” (¡No ignores las notas!) Podrías también poner un despertador que te ayude a detenerte varias veces por día para hacer esta práctica.',
+              color: Colors.white,
             ),
             BotonGordo(
-                icon: FontAwesomeIcons.globe,
+                icon: FontAwesomeIcons.question,
                 texto: 'Si terminaste el desafío sigue adelante',
                 color1: const Color.fromARGB(255, 34, 210, 183),
                 color2: const Color.fromARGB(255, 12, 85, 52),
@@ -72,7 +71,7 @@ class _Acuerdate34State extends State<Acuerdate34> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Descubrimiento34()));
+                          builder: (context) => Descubrimiento36()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.arrowLeftLong,

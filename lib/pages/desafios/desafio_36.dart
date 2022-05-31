@@ -1,20 +1,19 @@
-import 'package:calmar_la_ansiedad/pages/descubrimientos/descubrimiento_34.dart';
-
+import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_35.dart';
+import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_36.dart';
+import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/boton_gordo.dart';
-import '../../widgets/custom_parrafo.dart';
-
 import '../../widgets/parrafo_grande.dart';
 import '../../widgets/top_bar.dart';
 
-class Acuerdate34 extends StatefulWidget {
+class Desafio36 extends StatefulWidget {
   @override
-  State<Acuerdate34> createState() => _Acuerdate34State();
+  State<Desafio36> createState() => _Desafio36State();
 }
 
-class _Acuerdate34State extends State<Acuerdate34> {
+class _Desafio36State extends State<Desafio36> {
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -39,16 +38,15 @@ class _Acuerdate34State extends State<Acuerdate34> {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-              Color.fromARGB(255, 38, 199, 162),
-              Color.fromARGB(255, 37, 87, 162),
+              Color.fromARGB(255, 255, 176, 7),
+              Color.fromARGB(255, 189, 36, 2),
             ])),
         child: ListView(
           // controller: PageController(viewportFraction: 0.8),
           // scrollDirection: Axis.vertical,
           children: [
             TopBar(
-              'Para que te acuerdes',
-              fontSize: 25,
+              'Desafío: 36',
               primaryAction: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
@@ -60,27 +58,19 @@ class _Acuerdate34State extends State<Acuerdate34> {
               ),
             ),
             ParrafoGrande(
-              'Coloca notas con la palabra “Tierra” o imágenes del planeta en lugares adecuados de tu ambiente. También podrías poner un poco de arena o tierra en un plato pequeño en tu escritorio, tu buró, o la mesa del comedor.',
-              color: Colors.black,
+              'Varias veces por día, haz una pausa para notar a qué le estás prestando atención en ese momento y luego abre los sentidos para ver si puedes descubrir lo que no has logrado notar.',
+              color: Colors.white,
             ),
+            Parrafo(
+                'Nuestra atención suele ser selectiva. ¿Qué estás ignorando?'),
             BotonGordo(
-                icon: FontAwesomeIcons.globe,
-                texto: 'Si terminaste el desafío sigue adelante',
+                icon: FontAwesomeIcons.question,
+                texto: 'Siguiente',
                 color1: const Color.fromARGB(255, 34, 210, 183),
                 color2: const Color.fromARGB(255, 12, 85, 52),
                 onpress: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Descubrimiento34()));
-                }),
-            BotonGordo(
-                icon: FontAwesomeIcons.arrowLeftLong,
-                texto: 'Regresa si aún no has terminado el desafío',
-                color1: const Color.fromARGB(255, 4, 51, 43),
-                color2: const Color.fromARGB(255, 15, 136, 81),
-                onpress: () {
-                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Acuerdate36()));
                 }),
           ],
         ),
