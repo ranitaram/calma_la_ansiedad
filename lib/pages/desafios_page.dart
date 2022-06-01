@@ -37,6 +37,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_42.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_43.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_44.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_45.dart';
+import 'package:calmar_la_ansiedad/pages/desafios/desafio_46.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_5.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_6.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_7.dart';
@@ -522,12 +523,10 @@ class _DesafiosPageState extends State<DesafiosPage> {
                 icon: FontAwesomeIcons.carSide,
                 texto: 'Desafío 46: Conduce en el presente',
                 color1: const Color.fromARGB(255, 75, 73, 73),
-                color2: const Color.fromARGB(255, 0, 255, 255),
+                color2: const Color.fromARGB(255, 185, 211, 211),
                 onpress: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (contex) => Desafio46Page()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (contex) => Desafio46()));
                 }),
             BotonGordo(
                 icon: FontAwesomeIcons.pizzaSlice,
