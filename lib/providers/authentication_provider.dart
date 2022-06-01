@@ -16,6 +16,14 @@ class AuthenticationProvider extends ChangeNotifier {
   late final NavigationService _navigationService;
   late final DatabaseService _databaseService;
 
+  // bool _isLoading = false;
+  // bool get isLoading => _isLoading;
+
+  // set isLoading(bool value) {
+  //   _isLoading = value;
+  //   notifyListeners();
+  // }
+
   late ChatUser user;
 
   AuthenticationProvider() {
