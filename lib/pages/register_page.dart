@@ -153,7 +153,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   });
                 },
                 regEx: r".{6,}",
-                hintText: "Contraseña",
+                hintText: "Contraseña mayor a 5 caracteres",
                 obscureText: true),
           ],
         ),
