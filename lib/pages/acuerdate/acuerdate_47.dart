@@ -1,18 +1,19 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_46.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
+import 'package:calmar_la_ansiedad/pages/descubrimientos/descubrimiento_47.dart';
+import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/boton_gordo.dart';
-import '../../widgets/parrafo_grande.dart';
+import '../../widgets/custom_parrafo.dart';
+
 import '../../widgets/top_bar.dart';
 
-class Desafio46 extends StatefulWidget {
+class Acuerdate47 extends StatefulWidget {
   @override
-  State<Desafio46> createState() => _Desafio46State();
+  State<Acuerdate47> createState() => _Acuerdate47State();
 }
 
-class _Desafio46State extends State<Desafio46> {
+class _Acuerdate47State extends State<Acuerdate47> {
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -37,15 +38,16 @@ class _Desafio46State extends State<Desafio46> {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-              Color.fromARGB(255, 75, 73, 73),
-              Color.fromARGB(255, 185, 211, 211),
+              Color.fromARGB(255, 242, 118, 41),
+              Color.fromARGB(255, 167, 75, 232),
             ])),
         child: ListView(
           // controller: PageController(viewportFraction: 0.8),
           // scrollDirection: Axis.vertical,
           children: [
             TopBar(
-              'Desafío: 46',
+              'Para que te acuerdes',
+              fontSize: 25,
               primaryAction: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
@@ -57,21 +59,27 @@ class _Desafio46State extends State<Desafio46> {
               ),
             ),
             ParrafoGrande(
-              'Lleva la atención consciente a la forma de conducir. Nota todos los movimientos del cuerpo, los movimientos del coche, los sonidos, los patrones de hábitos, y los pensamientos involucrados en el manejo.',
-              color: Colors.black,
-            ),
-            ParrafoGrande(
-              '(Si no conduces, puedes llevar la atención a andar en bicicleta o a ser pasajero en un coche, un autobús o un tren).',
+              'Coloca carteles que digan “Observa profundamente la comida” en los lugares donde comes habitualmente, como la cocina o la mesa del comedor.',
               color: Colors.black,
             ),
             BotonGordo(
-                icon: FontAwesomeIcons.carSide,
-                texto: 'Siguiente',
+                icon: FontAwesomeIcons.pizzaSlice,
+                texto: 'Si terminaste el desafío sigue adelante',
                 color1: const Color.fromARGB(255, 34, 210, 183),
                 color2: const Color.fromARGB(255, 12, 85, 52),
                 onpress: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Acuerdate46()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Descubrimiento47()));
+                }),
+            BotonGordo(
+                icon: FontAwesomeIcons.arrowLeftLong,
+                texto: 'Regresa si aún no has terminado el desafío',
+                color1: const Color.fromARGB(255, 4, 51, 43),
+                color2: const Color.fromARGB(255, 15, 136, 81),
+                onpress: () {
+                  Navigator.pop(context);
                 }),
           ],
         ),

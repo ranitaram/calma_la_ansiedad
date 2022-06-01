@@ -1,4 +1,4 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_46.dart';
+import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_47.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -7,12 +7,12 @@ import '../../widgets/boton_gordo.dart';
 import '../../widgets/parrafo_grande.dart';
 import '../../widgets/top_bar.dart';
 
-class Desafio46 extends StatefulWidget {
+class Desafio47 extends StatefulWidget {
   @override
-  State<Desafio46> createState() => _Desafio46State();
+  State<Desafio47> createState() => _Desafio47State();
 }
 
-class _Desafio46State extends State<Desafio46> {
+class _Desafio47State extends State<Desafio47> {
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -37,15 +37,15 @@ class _Desafio46State extends State<Desafio46> {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-              Color.fromARGB(255, 75, 73, 73),
-              Color.fromARGB(255, 185, 211, 211),
+              Color.fromARGB(255, 242, 118, 41),
+              Color.fromARGB(255, 167, 75, 232),
             ])),
         child: ListView(
           // controller: PageController(viewportFraction: 0.8),
           // scrollDirection: Axis.vertical,
           children: [
             TopBar(
-              'Desafío: 46',
+              'Desafío: 47',
               primaryAction: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
@@ -57,21 +57,25 @@ class _Desafio46State extends State<Desafio46> {
               ),
             ),
             ParrafoGrande(
-              'Lleva la atención consciente a la forma de conducir. Nota todos los movimientos del cuerpo, los movimientos del coche, los sonidos, los patrones de hábitos, y los pensamientos involucrados en el manejo.',
+              'Cuando comas, toma un momento para observar la comida o bebida como si pudieras verla en retrospectiva, en su historia. Usa el poder de la imaginación para ver de dónde viene y ',
               color: Colors.black,
             ),
             ParrafoGrande(
-              '(Si no conduces, puedes llevar la atención a andar en bicicleta o a ser pasajero en un coche, un autobús o un tren).',
+              'cuánta gente pudo haber estado involucrada en traerla hasta tu plato. Piensa en las personas que plantaron, desmalezaron y cosecharon los alimentos, los camioneros que los transportaron,',
+              color: Colors.black,
+            ),
+            ParrafoGrande(
+              'los empacadores y obreros, los almaceneros, los cajeros, y los miembros de la familia u otros cocineros que han preparado la comida. Agradece a esas personas antes de tomar un trago o un bocado.',
               color: Colors.black,
             ),
             BotonGordo(
-                icon: FontAwesomeIcons.carSide,
+                icon: FontAwesomeIcons.pizzaSlice,
                 texto: 'Siguiente',
                 color1: const Color.fromARGB(255, 34, 210, 183),
                 color2: const Color.fromARGB(255, 12, 85, 52),
                 onpress: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Acuerdate46()));
+                      MaterialPageRoute(builder: (context) => Acuerdate47()));
                 }),
           ],
         ),
