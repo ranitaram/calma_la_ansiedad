@@ -1,6 +1,7 @@
 //Packages
 import 'dart:async';
 
+import 'package:calmar_la_ansiedad/app/domian/models/app_notfication.dart';
 import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
 import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
 import 'package:flutter/material.dart';
@@ -29,25 +30,33 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _init();
     });
   }
 
   void _init() {
-    _subscription =
-        _pushNotificationsRepository.onNotification.listen((notification) {
-      print("🫣 ");
+    _subscription = _pushNotificationsRepository.onNotification
+        .where((e) => e.type == AppNotificationsTypes.PROMO)
+        .listen((notification) {
       showDialog(
           context: context,
           builder: (_) => AlertDialog(
-                title: notification.title != null
-                    ? Text(notification.title!)
-                    : null,
-                content:
-                    notification.body != null ? Text(notification.body!) : null,
+                title: Text(notification.title),
+                content: Text(notification.body),
               ));
     });
+    // _subscription =
+    //     _pushNotificationsRepository.onNotification.listen((notification) {
+    //   print("🫣  ${notification.type}");
+    //   print("🫣  ${notification.content}");
+    //   showDialog(
+    //       context: context,
+    //       builder: (_) => AlertDialog(
+    //             title: Text(notification.title),
+    //             content: Text(notification.body),
+    //           ));
+    // });
   }
 
   @override
