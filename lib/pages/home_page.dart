@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _init() {
+  void _init() async {
     _subscription = _pushNotificationsRepository.onNotification
         .where((e) => e.type == AppNotificationsTypes.PROMO)
         .listen((notification) {
@@ -46,17 +46,17 @@ class _HomePageState extends State<HomePage> {
                 content: Text(notification.body),
               ));
     });
-    // _subscription =
-    //     _pushNotificationsRepository.onNotification.listen((notification) {
-    //   print("🫣  ${notification.type}");
-    //   print("🫣  ${notification.content}");
-    //   showDialog(
-    //       context: context,
-    //       builder: (_) => AlertDialog(
-    //             title: Text(notification.title),
-    //             content: Text(notification.body),
-    //           ));
-    // });
+    final initialNotification =
+        await _pushNotificationsRepository.initialNotification;
+    if (initialNotification != null) {
+      showDialog(
+          context: context,
+          builder: (_) => AlertDialog(
+                title:
+                    Text("Initial Notification ${initialNotification.title}"),
+                content: Text(initialNotification.content.toString()),
+              ));
+    }
   }
 
   @override
