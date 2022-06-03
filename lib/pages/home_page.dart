@@ -1,6 +1,10 @@
 //Packages
+import 'dart:async';
+
+import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
 import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 //Pages
 import '../pages/chats_page.dart';
@@ -14,8 +18,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final _pushNotificationsRepository =
+      GetIt.I.get<PushNotificationsRepository>();
+
+  late StreamSubscription _subscription;
+
   int _currentPage = 0;
   final List<Widget> _pages = [ChatsPage(), UsersPage(), TranquilidadPage()];
+
+  @override
+  void initState() {
+    super.initState();
+    _pushNotificationsRepository.onNotification.listen((notification) {
+      print("🫣 ");
+    });
+  }
+
+  @override
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

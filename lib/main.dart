@@ -1,12 +1,15 @@
+import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
+import 'package:calmar_la_ansiedad/dependency_injection.dart';
 import 'package:calmar_la_ansiedad/routes/routes.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 //Packages
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'dart:io' show Platform;
+// import 'dart:io' show Platform;
 
 //Services
 import './services/navigation_service.dart';
@@ -20,6 +23,7 @@ import './pages/splash_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  injectDependencies();
   runApp(
     SplashPage(
       key: UniqueKey(),
@@ -45,14 +49,9 @@ class _MainAppState extends State<MainApp> {
   }
 
   Future<void> _init() async {
-    if (Platform.isIOS) {
-      final settings = await FirebaseMessaging.instance.requestPermission();
-      if (settings.authorizationStatus == AuthorizationStatus.authorized) {
-        FirebaseMessaging.instance.subscribeToTopic('promos');
-      }
-    } else {
-      FirebaseMessaging.instance.subscribeToTopic('promos');
-    }
+    final pushNotifications = GetIt.I.get<PushNotificationsRepository>();
+    await pushNotifications.requestPermission();
+    pushNotifications.subscribeToTopic('promos');
   }
 
   @override
