@@ -15,6 +15,7 @@ class PushNotificationsRepositoryImpl implements PushNotificationsRepository {
   void _init() {
     FirebaseMessaging.onMessage.listen((message) {
       final notification = message.notification;
+      print("message.data ${message.data}");
       if (notification != null) {
         print("notification.title: ${notification.title}");
         print("notification.body: ${notification.body}");

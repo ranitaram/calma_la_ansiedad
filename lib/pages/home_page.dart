@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   final _pushNotificationsRepository =
       GetIt.I.get<PushNotificationsRepository>();
 
-  late StreamSubscription _subscription;
+  StreamSubscription? _subscription;
 
   int _currentPage = 0;
   final List<Widget> _pages = [ChatsPage(), UsersPage(), TranquilidadPage()];
@@ -29,14 +29,30 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _pushNotificationsRepository.onNotification.listen((notification) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      _init();
+    });
+  }
+
+  void _init() {
+    _subscription =
+        _pushNotificationsRepository.onNotification.listen((notification) {
       print("🫣 ");
+      showDialog(
+          context: context,
+          builder: (_) => AlertDialog(
+                title: notification.title != null
+                    ? Text(notification.title!)
+                    : null,
+                content:
+                    notification.body != null ? Text(notification.body!) : null,
+              ));
     });
   }
 
   @override
   void dispose() {
-    _subscription.cancel();
+    _subscription?.cancel();
     super.dispose();
   }
 
