@@ -15,6 +15,9 @@ class PushNotificationsRepositoryImpl implements PushNotificationsRepository {
   }
 
   @override
+  Future<String?> get deviceToken => _messaging.getToken();
+
+  @override
   Stream<AppNotiication> get onNotification {
     //_streamController = _streamController ?? StreamController.broadcast();
     _streamController ??= StreamController.broadcast();
