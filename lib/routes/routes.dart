@@ -1,4 +1,5 @@
 import 'package:calmar_la_ansiedad/app/ui/routes/routes.dart';
+import 'package:calmar_la_ansiedad/pages/chats_page.dart';
 import 'package:calmar_la_ansiedad/pages/consejos_page.dart';
 import 'package:calmar_la_ansiedad/pages/home_page.dart';
 import 'package:calmar_la_ansiedad/pages/login_page.dart';
@@ -20,4 +21,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   Routes.REGISTER: (_) => RegisterPage(),
   Routes.TRANQUILIDAD: (_) => TranquilidadPage(),
   Routes.CONSEJO: (_) => ConsejosPage(),
+  Routes.CHATS: (_) => ChatsPage(),
 };

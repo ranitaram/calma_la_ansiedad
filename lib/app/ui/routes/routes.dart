@@ -5,4 +5,5 @@ abstract class Routes {
   static const REGISTER = '/register';
   static const TRANQUILIDAD = '/tranquilidad';
   static const CONSEJO = '/consejo';
+  static const CHATS = '/chats';
 }

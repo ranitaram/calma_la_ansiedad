@@ -1,4 +1,5 @@
 import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
+import 'package:calmar_la_ansiedad/app/ui/pages/splash/splash_controller.dart';
 import 'package:calmar_la_ansiedad/app/ui/routes/routes.dart';
 import 'package:calmar_la_ansiedad/dependency_injection.dart';
 import 'package:calmar_la_ansiedad/routes/routes.dart';
@@ -43,6 +44,8 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
+  //final _controller = SplashController();
+
   @override
   void initState() {
     super.initState();

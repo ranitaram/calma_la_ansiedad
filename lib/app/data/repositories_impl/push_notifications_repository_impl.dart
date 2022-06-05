@@ -46,8 +46,9 @@ class PushNotificationsRepositoryImpl implements PushNotificationsRepository {
       dynamic content;
       if (type == AppNotificationsTypes.PROMO) {
         content = jsonDecode(message.data['content']);
+      } else if (type == AppNotificationsTypes.CHAT) {
+        content = jsonDecode(message.data['content']);
       }
-
       return AppNotiication(
           title: notification.title ?? '',
           body: notification.body ?? '',
