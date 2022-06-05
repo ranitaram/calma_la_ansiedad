@@ -1,4 +1,5 @@
 import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
+import 'package:calmar_la_ansiedad/app/ui/routes/routes.dart';
 import 'package:calmar_la_ansiedad/dependency_injection.dart';
 import 'package:calmar_la_ansiedad/routes/routes.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
@@ -75,7 +76,7 @@ class _MainAppState extends State<MainApp> {
             ),
           ),
           navigatorKey: NavigationService.navigatorKey,
-          initialRoute: '/login',
+          initialRoute: Routes.LOGIN,
           routes: routes
           // {
           //   '/login': (BuildContext _context) => LoginPage(),

@@ -1,3 +1,4 @@
+import 'package:calmar_la_ansiedad/app/ui/pages/splash/splash_controller.dart';
 import 'package:flutter/material.dart';
 
 //Packages
@@ -25,6 +26,8 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  // final _controller = SplashController();
+
   @override
   void initState() {
     super.initState();
