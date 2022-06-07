@@ -11,10 +11,12 @@ import 'package:calmar_la_ansiedad/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/authentication_provider.dart';
 import '../providers/chats_page_provider.dart';
+import '../widgets/admon_ads.dart';
 
 class ConsejosPage extends StatefulWidget {
   @override
@@ -22,10 +24,24 @@ class ConsejosPage extends StatefulWidget {
 }
 
 class _ConsejosPageState extends State<ConsejosPage> {
+  late BannerAd _bannerAd;
   late double _deviceHeight;
   late double _deviceWidth;
 
   late AuthenticationProvider _auth;
+
+  @override
+  void initState() {
+    MobileAds.instance.initialize();
+    _loadBanner();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _loadBanner();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +83,11 @@ class _ConsejosPageState extends State<ConsejosPage> {
                   Navigator.pop(context);
                 },
               ),
+            ),
+            Container(
+              child: AdWidget(ad: _bannerAd),
+              width: _bannerAd.size.width.toDouble(),
+              height: _bannerAd.size.height.toDouble(),
             ),
             _titulo(),
             Parrafo(
@@ -207,5 +228,15 @@ class _ConsejosPageState extends State<ConsejosPage> {
         ),
       ),
     );
+  }
+
+  _loadBanner() {
+    _bannerAd = BannerAd(
+        size: AdSize.largeBanner,
+        adUnitId: Anuncios.banner,
+        listener: const BannerAdListener(),
+        request: const AdRequest());
+
+    _bannerAd.load();
   }
 }

@@ -1,8 +1,10 @@
 import 'package:calmar_la_ansiedad/widgets/Boton_ejercicio.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:lottie/lottie.dart';
 
+import '../../widgets/admon_ads.dart';
 import '../../widgets/boton_gordo.dart';
 
 class ConsejoRespiracion extends StatefulWidget {
@@ -11,8 +13,22 @@ class ConsejoRespiracion extends StatefulWidget {
 }
 
 class _ConsejoRespiracionState extends State<ConsejoRespiracion> {
+  late BannerAd _bannerAd;
   late double _deviceHeight;
   late double _deviceWidth;
+
+  @override
+  void initState() {
+    MobileAds.instance.initialize();
+    _loadBanner();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _loadBanner();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +59,11 @@ class _ConsejoRespiracionState extends State<ConsejoRespiracion> {
                 color1: const Color.fromARGB(255, 55, 199, 228),
                 color2: const Color.fromARGB(255, 136, 171, 155),
                 onpress: () {}),
+            Container(
+              child: AdWidget(ad: _bannerAd),
+              width: _bannerAd.size.width.toDouble(),
+              height: _bannerAd.size.height.toDouble(),
+            ),
             BotonEjercicio(
                 icon: FontAwesomeIcons.universalAccess,
                 texto:
@@ -79,5 +100,15 @@ class _ConsejoRespiracionState extends State<ConsejoRespiracion> {
         ),
       ),
     );
+  }
+
+  _loadBanner() {
+    _bannerAd = BannerAd(
+        size: AdSize.mediumRectangle,
+        adUnitId: Anuncios.banner,
+        listener: const BannerAdListener(),
+        request: const AdRequest());
+
+    _bannerAd.load();
   }
 }
