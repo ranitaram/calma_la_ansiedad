@@ -1,5 +1,6 @@
 //Packages
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:get_it/get_it.dart';
 
@@ -14,6 +15,7 @@ import '../services/navigation_service.dart';
 import '../pages/chat_page.dart';
 
 //Widgets
+import '../widgets/admon_ads.dart';
 import '../widgets/top_bar.dart';
 import '../widgets/custom_list_view_tiles.dart';
 
@@ -30,12 +32,27 @@ class ChatsPage extends StatefulWidget {
 }
 
 class _ChatsPageState extends State<ChatsPage> {
+  late BannerAd _bannerAd;
   late double _deviceHeight;
   late double _deviceWidth;
 
   late AuthenticationProvider _auth;
   late NavigationService _navigation;
   late ChatsPageProvider _pageProvider;
+
+  @override
+  void initState() {
+    MobileAds.instance.initialize();
+
+    super.initState();
+    _loadBanner();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _loadBanner();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +97,11 @@ class _ChatsPageState extends State<ChatsPage> {
                     _auth.logout();
                   },
                 ),
+              ),
+              Container(
+                child: AdWidget(ad: _bannerAd),
+                width: _bannerAd.size.width.toDouble(),
+                height: _bannerAd.size.height.toDouble(),
               ),
               _chatsList(),
             ],
@@ -144,5 +166,15 @@ class _ChatsPageState extends State<ChatsPage> {
         );
       },
     );
+  }
+
+  _loadBanner() {
+    _bannerAd = BannerAd(
+        size: AdSize.largeBanner,
+        adUnitId: Anuncios.banner,
+        listener: const BannerAdListener(),
+        request: const AdRequest());
+
+    _bannerAd.load();
   }
 }

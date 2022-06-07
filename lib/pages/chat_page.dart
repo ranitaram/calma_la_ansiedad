@@ -139,7 +139,7 @@ class _ChatPageState extends State<ChatPage> {
           ),
         );
       } else {
-        return Align(
+        return const Align(
           alignment: Alignment.center,
           child: Text(
             "Sé el primero en decir Hola!",
@@ -148,7 +148,7 @@ class _ChatPageState extends State<ChatPage> {
         );
       }
     } else {
-      return Center(
+      return const Center(
         child: CircularProgressIndicator(
           color: Colors.white,
         ),
@@ -160,7 +160,7 @@ class _ChatPageState extends State<ChatPage> {
     return Container(
       height: _deviceHeight * 0.06,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(30, 29, 37, 1.0),
+        color: const Color.fromRGBO(30, 29, 37, 1.0),
         borderRadius: BorderRadius.circular(100),
       ),
       margin: EdgeInsets.symmetric(
@@ -191,7 +191,7 @@ class _ChatPageState extends State<ChatPage> {
             _pageProvider.message = _value;
           },
           regEx: r"^(?!\s*$).+",
-          hintText: "Type a message",
+          hintText: "Escriba un mensaje",
           obscureText: false),
     );
   }

@@ -1,5 +1,6 @@
 //Packages
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:get_it/get_it.dart';
 
@@ -8,6 +9,7 @@ import '../providers/authentication_provider.dart';
 import '../providers/users_page_provider.dart';
 
 //Widgets
+import '../widgets/admon_ads.dart';
 import '../widgets/top_bar.dart';
 import '../widgets/custom_input_fields.dart';
 import '../widgets/custom_list_view_tiles.dart';
@@ -24,6 +26,7 @@ class UsersPage extends StatefulWidget {
 }
 
 class _UsersPageState extends State<UsersPage> {
+  late BannerAd _bannerAd;
   late double _deviceHeight;
   late double _deviceWidth;
 
@@ -32,6 +35,19 @@ class _UsersPageState extends State<UsersPage> {
 
   final TextEditingController _searchFieldTextEditingController =
       TextEditingController();
+
+  @override
+  void initState() {
+    MobileAds.instance.initialize();
+    _loadBanner();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _loadBanner();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +99,12 @@ class _UsersPageState extends State<UsersPage> {
                 obscureText: false,
                 controller: _searchFieldTextEditingController,
                 icon: Icons.search,
+              ),
+              const SizedBox(height: 15),
+              Container(
+                child: AdWidget(ad: _bannerAd),
+                width: _bannerAd.size.width.toDouble(),
+                height: _bannerAd.size.height.toDouble(),
               ),
               _usersList(),
               _createChatButton(),
@@ -152,5 +174,15 @@ class _UsersPageState extends State<UsersPage> {
         },
       ),
     );
+  }
+
+  _loadBanner() {
+    _bannerAd = BannerAd(
+        size: AdSize.largeBanner,
+        adUnitId: Anuncios.banner,
+        listener: const BannerAdListener(),
+        request: const AdRequest());
+
+    _bannerAd.load();
   }
 }

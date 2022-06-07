@@ -7,8 +7,9 @@ import 'package:calmar_la_ansiedad/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 //Packages
-import 'package:firebase_analytics/firebase_analytics.dart';
+
 import 'package:get_it/get_it.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'dart:io' show Platform;
@@ -24,6 +25,7 @@ import './pages/splash_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   await Firebase.initializeApp();
   injectDependencies();
   runApp(
