@@ -1,6 +1,7 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_1.dart';
 
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
+import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -55,19 +56,11 @@ class _Desafio1State extends State<Desafio1> {
             ),
             Parrafo(
               'Usa tu mano menos capaz para algunas tareas comunes de todos los días.',
-              color: Colors.black,
+              color: Colors.white,
             ),
-            Parrafo(
-              'Estas podrían ser cepillarte los dientes, peinarte o comer con la ',
-              color: Colors.black,
-            ),
-            Parrafo(
-              'mano no dominante. Si estás preparado para un gran desafío, ',
-              color: Colors.black,
-            ),
-            Parrafo(
-              'trata de usar la mano no dominante cuando escribes.',
-              color: Colors.black,
+            ParrafoGrande(
+              'Estas podrían ser cepillarte los dientes, peinarte o comer con la mano no dominante. Si estás preparado para un gran desafío, trata de usar la mano no dominante cuando escribes.',
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.angellist,
