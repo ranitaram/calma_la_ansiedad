@@ -1,7 +1,5 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_1.dart';
-import 'package:calmar_la_ansiedad/pages/desafios_page.dart';
-
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
+import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -55,53 +53,22 @@ class _Descubrimiento2State extends State<Descubrimiento2> {
                 },
               ),
             ),
-            Parrafo(
-              'Frecuentemente, dejamos los cuartos más desordenados que cuando entramos',
-              color: Colors.black,
+            ParrafoGrande(
+              'Frecuentemente, dejamos los cuartos más desordenados que cuando entramos y pensamos que lo limpiaremos más tarde y luego eso no sucede; Entonces, si lo hacemos en ese momento, no tenemos que sentir un malestar creciente ante el desorden en aumento.',
+              color: Colors.white,
             ),
-            Parrafo(
-              'y pensamos que lo limpiaremos más tarde y luego eso no sucede;',
-              color: Colors.black,
+            ParrafoGrande(
+              'Este desafío nos ayuda a volvernos consientes de la tendencia a no hacer las cosas, incluso aunque sean pequeñas y que por algún motivo no tenemos motivación para hacer. El desafío pone en foco a nuestra tendencia a ser perezosos,',
+              color: Colors.white,
             ),
-            Parrafo(
-              'Entonces, si lo hacemos en ese momento, no tenemos que sentir un malestar creciente ante el desorden en aumento.',
-              color: Colors.black,
+            ParrafoGrande(
+              'a menudo dejamos líos para que otros limpien, nuestra mente y vida parece menos complicada cuando hemos limpiado el espacio y las cosas que nos rodean. La sensación de satisfacción de no dejar rastros puede ser',
             ),
-            Parrafo(
-              'Este desafío nos ayuda a volvernos consientes de la tendencia a no hacer las cosas,',
-              color: Colors.black,
-            ),
-            const SizedBox(height: 15),
-            Parrafo(
-              'incluso aunque sean pequeñas y que por algún motivo no tenemos motivación para hacer.',
-              color: Colors.black,
-            ),
-            const SizedBox(height: 15),
-            Parrafo(
-              'El desafío pone en foco a nuestra tendencia a ser perezosos, a menudo dejamos líos para que otros limpien,',
-              color: Colors.black,
-            ),
-            Parrafo(
-              'nuestra mente y vida parece menos complicada cuando hemos limpiado el espacio y las cosas que nos rodean.',
-              color: Colors.black,
-            ),
-            const SizedBox(height: 15),
-            Parrafo(
-              'La sensación de satisfacción de no dejar rastros puede ser el reflejo de nuestro deseo de dejar el mundo,',
-              color: Colors.black,
-            ),
-            Parrafo(
-              'al menos no peor que cuando entramos en él y ojalá, dejarlo un poco mejor.',
-              color: Colors.black,
-            ),
-            Parrafo(
-              'Idealmente, los únicos rastros que dejaremos serán las formas en que hemos amado, inspirado,',
-              color: Colors.black,
-            ),
-            const SizedBox(height: 15),
+            ParrafoGrande(
+                'el reflejo de nuestro deseo de dejar el mundo, al menos no peor que cuando entramos en él y ojalá, dejarlo un poco mejor. Idealmente, los únicos rastros que dejaremos serán las formas en que hemos amado, inspirado,'),
             Parrafo(
               'enseñado o servido a otros, esto es lo que tendrá el efecto más positivo en la gente en el futuro.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.angellist,

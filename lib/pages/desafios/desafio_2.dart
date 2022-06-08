@@ -54,15 +54,15 @@ class _Desafio2State extends State<Desafio2> {
             ),
             Parrafo(
               'Escoge un área de tu casa y por una semana no dejes rastro que has estado ahí,',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'esta puede ser la cocina, tu cuarto o el baño, son solo unos ejemplos, ',
-              color: Colors.black,
+              color: Colors.white,
             ),
             Parrafo(
               'y si has estado en esa área debes de dejar limpio de tal modo que no dejes señales de que la has utilizado.',
-              color: Colors.black,
+              color: Colors.white,
             ),
             BotonGordo(
                 icon: FontAwesomeIcons.ghost,
