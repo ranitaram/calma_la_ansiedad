@@ -1,5 +1,4 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_22.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -61,26 +60,13 @@ class _Desafio22State extends State<Desafio22> {
             // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Con tanta frecuencia como sea posible durante el día, dirige tu conciencia a la planta de los pies. Sé consciente de las sensaciones en la planta del pie, por ejemplo,',
-              color: Colors.black,
+              color: Colors.white,
             ),
 
             ParrafoGrande(
               'la presión del piso o la tierra debajo de los pies, o la calidez o la frialdad de estos. Es particularmente importante hacer este ejercicio cuando sientas que te estás poniendo ansioso o molesto.',
-              color: Colors.black,
+              color: Colors.white,
             ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.shoePrints,
