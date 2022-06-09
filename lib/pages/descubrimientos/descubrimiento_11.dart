@@ -106,10 +106,6 @@ class _Descubrimiento11State extends State<Descubrimiento11> {
               'ignoramos el saludo de un compañero de trabajo porque tuvimos una discusión el día anterior. Así es como las otras personas se deshumanizan, se convierten en una molestia, un obstáculo y en última instancia, en un enemigo.',
               color: Colors.black,
             ),
-            // Parrafo(
-            //   'dañinos mientras cultivamos los nuevos y saludables.',
-            //   color: Colors.white,
-            // ),
             BotonGordo(
                 icon: FontAwesomeIcons.handsPraying,
                 texto: '!Felicidades¡por terminar el desafío!',

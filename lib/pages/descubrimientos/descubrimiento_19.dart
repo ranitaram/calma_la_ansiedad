@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -90,23 +89,7 @@ class _Descubrimiento19State extends State<Descubrimiento19> {
               'dando vueltas incesantemente, sin poder dormir). Recuerda relajar las manos y, con ellas, todo el cuerpo y la mente, te puedes ayudar con la meditación.',
               color: Colors.black,
             ),
-            // ParrafoGrande(
-            //   'Esta práctica, abrir nuestra conciencia a todos los seres vivos que nos rodean, puede ser un antídoto para la penetrante sensación de soledad que nos invade a tantos. Incluso en la ciudad hay animales,',
-            //   color: Colors.white,
-            // ),
-            // ParrafoGrande(
-            //   'pájaros, plantas e insectos a nuestro alrededor. Dentro de nuestro cuerpo hay miles de millones de seres vivos, la mayoría de ellos beneficiosos. Su vida está entrelazada con la nuestra, y ellos son necesarios para nuestra salud y ',
-            //   color: Colors.white,
-            // ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // ParrafoGrande(
-            //     'nosotros para la de ellos. Cuando nuestra mente se encierra en las preocupaciones del “yo, mi, mío”, creamos soledad. Cuando abrimos el corazón a la conciencia de todos esos seres con los que estamos conectados,'),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // Parrafo('nuestra soledad desaparece. Nunca estás solo.'),
+
             BotonGordo(
                 icon: FontAwesomeIcons.handSparkles,
                 texto: '!Felicidades¡por terminar el desafío!',

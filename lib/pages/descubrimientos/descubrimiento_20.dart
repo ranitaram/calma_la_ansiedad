@@ -68,7 +68,6 @@ class _Descubrimiento20State extends State<Descubrimiento20> {
               'podríamos ver que nuestros pensamientos forman defensas y contraargumentos. Nuestra habitual postura de oposición puede asumir la forma de pensamientos (“No estoy de acuerdo con lo que está diciendo”),',
               color: Colors.white,
             ),
-
             ParrafoGrande(
               'lenguaje corporal (tensión muscular, brazos cruzados), o acción (sacudir la cabeza, dar vuelta los ojos, ignorar a quién está hablando). En ciertas profesiones la gente informa que tiene dificultad con esta tarea.',
               color: Colors.white,
@@ -94,7 +93,6 @@ class _Descubrimiento20State extends State<Descubrimiento20> {
             const SizedBox(
               height: 20,
             ),
-
             ParrafoGrande(
               'generoso. No expresar oposición nos ayuda a soltar puntos de vista egoístas y ver qué nuestra opinión personal en realidad no es tan importante después de todo. Es sorprendente con cuanta frecuencia nuestro desacuerdo con',
               color: Colors.white,
@@ -106,13 +104,9 @@ class _Descubrimiento20State extends State<Descubrimiento20> {
               'otra persona no es realmente relevante y solo sirve para aumentar nuestra angustia y el sufrimiento de quienes nos rodean. Decir sí puede ser energizante, pues la resistencia habitual es un drenaje persistente de nuestra energía vital.',
               color: Colors.white,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
             const SizedBox(
               height: 20,
             ),
-
             Parrafo(
                 'Cultiva una actitud interna de decir “sí” a la vida y a todo lo que te trae. Te ahorrará mucha energía.'),
             BotonGordo(

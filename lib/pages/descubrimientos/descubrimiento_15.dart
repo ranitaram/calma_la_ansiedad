@@ -64,9 +64,6 @@ class _Descubrimiento15State extends State<Descubrimiento15> {
               'como algunas personas admitieron, puede haber algo de decepción al no ser atrapado o reconocido. Es todavía más interesante quedarse en silencio cuando a alguien más se le agradece por el regalo que hemos dado anónimamente.',
               color: Colors.white,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
             const SizedBox(
               height: 20,
             ),
@@ -93,7 +90,6 @@ class _Descubrimiento15State extends State<Descubrimiento15> {
             const SizedBox(
               height: 20,
             ),
-
             Parrafo(
               'cuidadosamente reunida y ferozmente defendida, que llamamos “yo, mi, mío”.',
               color: Colors.white,

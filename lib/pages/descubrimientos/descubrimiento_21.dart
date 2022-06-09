@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -61,14 +60,10 @@ class _Descubrimiento21State extends State<Descubrimiento21> {
               'La gente informa que, cuando se acuerda de observar el color azul alrededor, parece como si este saltara delante de ellos y los objetos azules se destacan como si se hubieran vuelto más tridimensionales.',
               color: Colors.black,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
             ParrafoGrande(
               'Esta tarea también lleva a un nuevo aprecio del cielo, el enorme tazón azul que ignoramos la mayor parte del tiempo, aunque suele conformar una gran parte de nuestro campo visual. El brillante cielo azul',
               color: Colors.black,
             ),
-
             ParrafoGrande(
               'siempre está sobre nosotros, aun cuando esté nublado o lloviendo. Nos damos cuenta de esto cuándo estamos volando y el avión asciende a través de las nubes bajas y de pronto surge bajo la luz brillante del sol.',
               color: Colors.black,
@@ -94,25 +89,14 @@ class _Descubrimiento21State extends State<Descubrimiento21> {
             const SizedBox(
               height: 20,
             ),
-
             ParrafoGrande(
               'preocupaciones y planes puede abrirse Siempre que lo deseemos. Así como el cielo azul está siempre sobre nosotros, aun cuando no podamos verlo, lo mismo ocurre con nuestra perfecta Naturaleza Original.',
               color: Colors.black,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
             ParrafoGrande(
               'Aunque nuestro estado mental esté nublado y nuestras emociones estén lloviendo, nuestra Naturaleza Original siempre está allí, brillando con fuerza dentro de nosotros y de todas las cosas.',
               color: Colors.black,
             ),
-            // // const SizedBox(
-            // //   height: 20,
-            // // ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.bold,
                 texto: '!Felicidades¡por terminar el desafío!',

@@ -68,7 +68,6 @@ class _Descubrimiento16State extends State<Descubrimiento16> {
             const SizedBox(
               height: 20,
             ),
-
             ParrafoGrande(
               'más en el momento presente, se asentará naturalmente. Luego, sin esfuerzo, podemos estar presente unas respiraciones más, y luego unas más, hasta que seamos capaces de sentarnos con una conciencia relajada y abierta.',
               color: Colors.white,
@@ -96,10 +95,6 @@ class _Descubrimiento16State extends State<Descubrimiento16> {
               color: Colors.white,
             ),
             Center(child: Lottie.asset('assets/images/respira.json')),
-            // Parrafo(
-            //   'cuidadosamente reunida y ferozmente defendida, que llamamos “yo, mi, mío”.',
-            //   color: Colors.white,
-            // ),
             BotonGordo(
                 icon: FontAwesomeIcons.lungs,
                 texto: '!Felicidades¡por terminar el desafío!',

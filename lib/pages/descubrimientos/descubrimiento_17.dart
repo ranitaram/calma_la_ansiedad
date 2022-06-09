@@ -96,16 +96,6 @@ class _Descubrimiento17State extends State<Descubrimiento17> {
               'Aprecia cada espacio físico y cada espacio mental que encuentres.',
               color: Colors.black,
             ),
-
-            // ParrafoGrande(
-            //   'pensamiento y encender su función de conciencia. Receta para la salud: Aquieta la mente únicamente durante tres respiraciones. Repite cuando sea necesario.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'cuidadosamente reunida y ferozmente defendida, que llamamos “yo, mi, mío”.',
-            //   color: Colors.white,
-            // ),
             BotonGordo(
                 icon: FontAwesomeIcons.doorOpen,
                 texto: '!Felicidades¡por terminar el desafío!',

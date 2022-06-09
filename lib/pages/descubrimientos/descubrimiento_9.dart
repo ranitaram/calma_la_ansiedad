@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -71,7 +70,6 @@ class _Descubrimiento9State extends State<Descubrimiento9> {
               'La práctica de escuchar es una forma poderosa de aquietar la mente. Cuando sentimos curiosidad por los sonidos, queremos escuchar con más detalle. Para hacerlo,',
               color: Colors.white,
             ),
-
             ParrafoGrande(
               'Para hacerlo, tenemos que pedirles a las voces que hay en nuestra mente que se callen por un momento. Escuchar es una excelente manera de desengancharnos de las interminables cavilaciones de la mente ansiosa. Cuando descubras',
               color: Colors.white,
@@ -90,13 +88,6 @@ class _Descubrimiento9State extends State<Descubrimiento9> {
               'abre tu conciencia a la oscuridad y escucha la música de la noche. Aun en lo que se llama silencio hay sonido. Para escuchar este sutil sonido, la mente debe estar muy quieta.',
               color: Colors.white,
             ),
-            // Parrafo(
-            //     'abre tu conciencia a la oscuridad y escucha la música de la noche. Aun en lo que se llama silencio hay sonido. Para escuchar este sutil sonido, la mente debe estar muy quieta.'),
-            // ParrafoGrande(
-            //   'La práctica de este reto es una forma muy poderosa para empezar a eliminar el estado mental negativo y de desastres y nos ayuda a sacar la luz los muchos sucesos positivos que pasaron en el día.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.jenkins,
                 texto: '!Felicidades¡por terminar el desafío!',
