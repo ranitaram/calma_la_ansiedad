@@ -1,5 +1,4 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_20.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -68,19 +67,6 @@ class _Desafio20State extends State<Desafio20> {
               'o incluso estar en silencio pero conforme? Siempre que no sea peligroso para ti o para otros, acepta a los demás y lo que está sucediendo en tu vida.',
               color: Colors.white,
             ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.stripeS,

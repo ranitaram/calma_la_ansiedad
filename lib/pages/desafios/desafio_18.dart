@@ -66,26 +66,16 @@ class _Desafio18State extends State<Desafio18> {
             const SizedBox(
               height: 20,
             ),
-            // Parrafo(
-            //     'dejar un dulce en el escritorio de un compañero o hacer una donación anónima.'),
 
             ParrafoGrande(
               'si no hay árboles cerca de dónde vives, puedes ver cualquier tipo de vegetación. Toma conciencia de que los árboles están respirando. Lo que exhalan (oxígeno), nosotros inhalamos.',
               color: Colors.white,
             ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
+
             Parrafo(
               'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
               color: Colors.white,
             ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.tree,

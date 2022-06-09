@@ -1,5 +1,4 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_23.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -63,24 +62,6 @@ class _Desafio23State extends State<Desafio23> {
               'Con tanta frecuencia como sea posible, desliza la conciencia de los objetos a los espacios que los rodean. Por ejemplo, nota el espacio vacío en lugar del mobiliario, la gente u otros objetos visuales.',
               color: Colors.black,
             ),
-
-            // ParrafoGrande(
-            //   'la presión del piso o la tierra debajo de los pies, o la calidez o la frialdad de estos. Es particularmente importante hacer este ejercicio cuando sientas que te estás poniendo ansioso o molesto.',
-            //   color: Colors.black,
-            // ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.creativeCommonsZero,

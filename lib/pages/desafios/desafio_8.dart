@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_7.dart';
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_8.dart';
 import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
@@ -56,18 +55,10 @@ class _Desafio8State extends State<Desafio8> {
                 },
               ),
             ),
-            // Parrafo('', color: Colors.black,),
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Cuando esté terminando el día, haz una lista de 3 cosas que sucedieron durante el día por las que estás agradecido y al final de la semana díselas a un amigo o alguien de confianza.',
               color: Colors.white,
             ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.rectangleList,
                 texto: 'Siguiente',

@@ -63,31 +63,11 @@ class _Desafio19State extends State<Desafio19> {
               'Varias veces por día relaja las manos por completo. Al menos durante unos segundos, déjalas completamente quietas. Una forma de hacerlo, es ponerlas en tus piernas y concentrar tu ',
               color: Colors.black,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
+
             Parrafo(
               'conciencia en las sutiles sensaciones en las manos inmóviles.',
               color: Colors.black,
             ),
-
-            // ParrafoGrande(
-            //   'si no hay árboles cerca de dónde vives, puedes ver cualquier tipo de vegetación. Toma conciencia de que los árboles están respirando. Lo que exhalan (oxígeno), nosotros inhalamos.',
-            //   color: Colors.white,
-            // ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.handSparkles,

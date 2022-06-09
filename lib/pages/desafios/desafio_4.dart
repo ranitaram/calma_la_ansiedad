@@ -1,5 +1,5 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_4.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
+
 import 'package:calmar_la_ansiedad/widgets/parrafo_grande.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -56,13 +56,10 @@ class _Desafio4State extends State<Desafio4> {
                 },
               ),
             ),
-            // Parrafo('', color: Colors.black,),
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Muchas veces al día, cuando tengas las manos ocupadas, míralas como si fueran de otra persona. También míralas cuando estén quietas.',
               color: Colors.black,
             ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.handHoldingHeart,
                 texto: 'Siguiente',

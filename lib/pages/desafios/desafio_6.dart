@@ -55,17 +55,10 @@ class _Desafio6State extends State<Desafio6> {
                 },
               ),
             ),
-            // Parrafo('', color: Colors.black,),
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Piensa en alguien cercano una vez al día, puede ser un amigo, alguien de la familia o un compañero de trabajo y otórgale un cumplido sincero, cuanto más especifico sea el cumplido y más cercana sea la persona será mejor.',
               color: Colors.black,
             ),
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.solidCommentDots,
                 texto: 'Siguiente',

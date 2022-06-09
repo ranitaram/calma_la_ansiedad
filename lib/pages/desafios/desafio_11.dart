@@ -60,28 +60,6 @@ class _Desafio11State extends State<Desafio11> {
               'Utiliza tus manos cariñosas y una caricia amorosa, incluso con objetos',
               color: Colors.black,
             ),
-            // Parrafo('', color: Colors.black,),
-            // ParrafoGrande(
-            //   'Cuando escuches el teléfono que suena, deja lo que estás haciendo y realiza 3 respiraciones para asentar a mente antes de responder. Si tu trabajo requiere de contestar llamadas continuamente puedes acortar esto a unas 2 respiraciones.',
-            //   color: Colors.white,
-            // ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // ParrafoGrande(
-            //   'El objetivo de esto es hacer una pausa y hacer una respiración profunda, tranquilizadora, antes de responder la llamada. Si recibes pocas llamas al día pon una alarma que suene varias veces al día cada 90 minutos,',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'por ejemplo, cuando suene, detente y respira.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.handsPraying,
                 texto: 'Siguiente',

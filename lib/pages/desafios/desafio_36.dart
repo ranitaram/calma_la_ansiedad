@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_35.dart';
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_36.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';

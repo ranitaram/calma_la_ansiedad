@@ -1,5 +1,4 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_14.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -63,31 +62,6 @@ class _Desafio14State extends State<Desafio14> {
               'Esta semana intenta mirar las cosas y a las personas con ojos amorosos. Nota cualquier cambio que se produzca en tus ojos, cara, cuerpo, corazón, mente, campo visual, y enfócate en recordar mirar con ojos amorosos.',
               color: Colors.white,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // ParrafoGrande(
-            //   'tus dispositivos electrónicos, no leas periódicos ni revistas, ya sea online o impresos, no navegues por internet ni tampoco escuches la radio. Si escuchas hablar a alguien de una noticia,',
-            //   color: Colors.white,
-            // ),
-
-            // ParrafoGrande(
-            //   'no tienes que taparte los oídos, pero evita entrar a profundidad en la conversación con ese tema, si insisten, puedes platicarle del desafío que estás llevando a cabo.',
-            //   color: Colors.white,
-            // ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'seguir la secuencia de los retos poco a poco, ya que tienen su razón de estar ordenados de esta forma.',
-            //   color: Colors.black,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.eye,

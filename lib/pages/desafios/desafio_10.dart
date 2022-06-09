@@ -56,8 +56,6 @@ class _Desafio10State extends State<Desafio10> {
                 },
               ),
             ),
-            // Parrafo('', color: Colors.black,),
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Cuando escuches el teléfono que suena, deja lo que estás haciendo y realiza 3 respiraciones para asentar a mente antes de responder. Si tu trabajo requiere de contestar llamadas continuamente puedes acortar esto a unas 2 respiraciones.',
               color: Colors.white,
@@ -73,12 +71,6 @@ class _Desafio10State extends State<Desafio10> {
               'por ejemplo, cuando suene, detente y respira.',
               color: Colors.white,
             ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.phone,
                 texto: 'Siguiente',

@@ -56,8 +56,6 @@ class _Desafio9State extends State<Desafio9> {
                 },
               ),
             ),
-            // Parrafo('', color: Colors.black,),
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'En el transcurso del día detente y solo oye, escucha los sonidos sutiles en tu cuerpo, en el cuarto, en tu trabajo o donde te encuentres, escucha como si fuera la primera vez y no supieras de donde vienen',
               color: Colors.white,
@@ -66,12 +64,6 @@ class _Desafio9State extends State<Desafio9> {
               'esos sonidos, intenta oír todos los sonidos.',
               color: Colors.white,
             ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.earlybirds,
                 texto: 'Siguiente',

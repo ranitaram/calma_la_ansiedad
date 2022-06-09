@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_11.dart';
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_12.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
@@ -83,11 +82,6 @@ class _Desafio12State extends State<Desafio12> {
               'seguir la secuencia de los retos poco a poco, ya que tienen su razón de estar ordenados de esta forma.',
               color: Colors.black,
             ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.stopwatch,

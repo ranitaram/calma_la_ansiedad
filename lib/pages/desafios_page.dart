@@ -51,7 +51,7 @@ import 'package:calmar_la_ansiedad/pages/desafios/desafio_7.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_8.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_9.dart';
 import 'package:calmar_la_ansiedad/pages/desafios/desafio_14.dart';
-import 'package:calmar_la_ansiedad/pages/tranquilidad_page.dart';
+
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -117,7 +117,7 @@ class _DesafiosPageState extends State<DesafiosPage> {
         child: ListView(
           controller: PageController(viewportFraction: 0.8),
           scrollDirection: Axis.vertical,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           children: [
             TopBar(
               'Desafíos',

@@ -1,5 +1,4 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_21.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -57,31 +56,10 @@ class _Desafio21State extends State<Desafio21> {
                 },
               ),
             ),
-
-            // Parrafo('', color: Colors.black,),
             ParrafoGrande(
               'Toma conciencia del color azul dondequiera que aparezca en tu ambiente. Observa no sólo las instancias obvias, como el cielo, sino también las apariencias sutiles y todas las variantes del azul.',
               color: Colors.black,
             ),
-
-            // ParrafoGrande(
-            //   '',
-            //   color: Colors.white,
-            // ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'Lo que exhalamos (dióxido de carbono), ellos inhalan.',
-            //   color: Colors.white,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.bold,
                 texto: 'Siguiente',

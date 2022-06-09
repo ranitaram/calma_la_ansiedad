@@ -1,4 +1,3 @@
-import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_14.dart';
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_15.dart';
 import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
 
@@ -64,29 +63,9 @@ class _Desafio15State extends State<Desafio15> {
               'Involúcrate en un acto secreto de virtud o bondad. Haz algo agradable o necesario para otros, pero hazlo en forma anónima. Estos actos pueden ser muy simples, desde limpiar el baño cuando no te toca,',
               color: Colors.white,
             ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
+
             Parrafo(
                 'dejar un dulce en el escritorio de un compañero o hacer una donación anónima.'),
-
-            // ParrafoGrande(
-            //   'no tienes que taparte los oídos, pero evita entrar a profundidad en la conversación con ese tema, si insisten, puedes platicarle del desafío que estás llevando a cabo.',
-            //   color: Colors.white,
-            // ),
-            // ParrafoGrande(
-            //   'Puedes buscar tus tareas en internet y hacer tus investigaciones, pero evita a toda costa las noticias. Parte de este desafío de estar presente es encontrar alternativas al consumo de medios.',
-            //   color: Colors.white,
-            // ),
-            // Parrafo(
-            //   'seguir la secuencia de los retos poco a poco, ya que tienen su razón de estar ordenados de esta forma.',
-            //   color: Colors.black,
-            // ),
-
-            // Parrafo(
-            //   'presta atención a los olores y los sabores.',
-            //   color: Colors.black,
-            // ),
 
             BotonGordo(
                 icon: FontAwesomeIcons.question,

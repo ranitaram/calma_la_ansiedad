@@ -1,5 +1,5 @@
 import 'package:calmar_la_ansiedad/pages/acuerdate/acuerdate_38.dart';
-import 'package:calmar_la_ansiedad/widgets/custom_parrafo.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/boton_gordo.dart';
-import '../../widgets/parrafo_grande.dart';
+
 import '../../widgets/top_bar.dart';
 
 class Desafio25 extends StatefulWidget {
@@ -57,16 +57,10 @@ class _Desafio25State extends State<Desafio25> {
                 },
               ),
             ),
-
             Parrafo(
               'Con tanta frecuencia como te sea posible durante el día, toma conciencia del surgimiento del deseo.',
               color: Colors.white,
             ),
-            // ParrafoGrande(
-            //   '',
-            //   color: Colors.white,
-            // ),
-
             BotonGordo(
                 icon: FontAwesomeIcons.star,
                 texto: 'Siguiente',
