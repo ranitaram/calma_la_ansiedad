@@ -35,6 +35,6 @@ class Chat {
   String imageURL() {
     return !group
         ? _recepients.first.imageURL
-        : "https://e7.pngegg.com/pngimages/380/670/png-clipart-group-chat-logo-blue-area-text-symbol-metroui-apps-live-messenger-alt-2-blue-text.png";
+        : "https://user-images.githubusercontent.com/84389669/173196483-69a26aaa-e524-4157-af7b-96c11427ed75.png";
   }
 }

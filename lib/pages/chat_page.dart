@@ -81,7 +81,7 @@ class _ChatPageState extends State<ChatPage> {
                     this.widget.chat.title(),
                     fontSize: 10,
                     primaryAction: IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.delete,
                         color: Color.fromRGBO(0, 82, 218, 1.0),
                       ),
@@ -90,7 +90,7 @@ class _ChatPageState extends State<ChatPage> {
                       },
                     ),
                     secondaryAction: IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Color.fromRGBO(0, 82, 218, 1.0),
                       ),
@@ -202,7 +202,7 @@ class _ChatPageState extends State<ChatPage> {
       height: _size,
       width: _size,
       child: IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.send,
           color: Colors.white,
         ),
@@ -223,7 +223,7 @@ class _ChatPageState extends State<ChatPage> {
       height: _size,
       width: _size,
       child: FloatingActionButton(
-        backgroundColor: Color.fromRGBO(
+        backgroundColor: const Color.fromRGBO(
           0,
           82,
           218,
@@ -232,7 +232,7 @@ class _ChatPageState extends State<ChatPage> {
         onPressed: () {
           _pageProvider.sendImageMessage();
         },
-        child: Icon(Icons.camera_enhance),
+        child: const Icon(Icons.camera_enhance),
       ),
     );
   }
