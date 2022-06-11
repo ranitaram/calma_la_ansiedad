@@ -1,8 +1,9 @@
 import 'package:calmar_la_ansiedad/app/domian/repositories/push_notifications_repository.dart';
-import 'package:calmar_la_ansiedad/app/ui/pages/splash/splash_controller.dart';
+
 import 'package:calmar_la_ansiedad/app/ui/routes/routes.dart';
 import 'package:calmar_la_ansiedad/dependency_injection.dart';
 import 'package:calmar_la_ansiedad/routes/routes.dart';
+import 'package:calmar_la_ansiedad/services/push_notification_services.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   await Firebase.initializeApp();
+  await PushNotificationService.initializeApp();
   injectDependencies();
   runApp(
     SplashPage(
@@ -48,17 +50,25 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   //final _controller = SplashController();
 
+  final GlobalKey<ScaffoldMessengerState> messangerKey =
+      new GlobalKey<ScaffoldMessengerState>();
+
   @override
   void initState() {
     super.initState();
-    _init();
+    PushNotificationService.messageStream.listen((message) {
+      print('MyApp: $message');
+      final snackBar = SnackBar(content: Text(message));
+      messangerKey.currentState?.showSnackBar(snackBar);
+    });
+    // _init();
   }
 
-  Future<void> _init() async {
-    final pushNotifications = GetIt.I.get<PushNotificationsRepository>();
-    await pushNotifications.requestPermission();
-    pushNotifications.subscribeToTopic('promos');
-  }
+  // Future<void> _init() async {
+  //   final pushNotifications = GetIt.I.get<PushNotificationsRepository>();
+  //   await pushNotifications.requestPermission();
+  //   pushNotifications.subscribeToTopic('promos');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +91,7 @@ class _MainAppState extends State<MainApp> {
             ),
           ),
           navigatorKey: NavigationService.navigatorKey,
+          scaffoldMessengerKey: messangerKey,
           initialRoute: Routes.LOGIN,
           routes: routes
           // {
