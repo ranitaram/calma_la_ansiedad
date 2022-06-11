@@ -84,9 +84,9 @@ class _MainAppState extends State<MainApp> {
           debugShowCheckedModeBanner: false,
           title: 'Calma la ansiedad',
           theme: ThemeData(
-            backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
-            scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
-            bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            backgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
+            scaffoldBackgroundColor: const Color.fromRGBO(36, 35, 49, 1.0),
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
               backgroundColor: Color.fromRGBO(30, 29, 37, 1.0),
             ),
           ),

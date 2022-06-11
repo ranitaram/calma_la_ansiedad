@@ -3,7 +3,7 @@
 
      <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="calmar_la_ansiedad"
+        android:label="Ansiedad"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon"
         android:usesCleartextTraffic="true">

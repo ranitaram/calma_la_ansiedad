@@ -44,33 +44,66 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buildUI() {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: _deviceWidth * 0.03,
-          vertical: _deviceHeight * 0.02,
-        ),
-        height: _deviceHeight * 0.98,
-        width: _deviceWidth * 0.97,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            _pageTitle(),
-            SizedBox(
-              height: _deviceHeight * 0.04,
-            ),
-            _loginForm(),
-            SizedBox(
-              height: _deviceHeight * 0.05,
-            ),
-            _loginButton(),
-            SizedBox(
-              height: _deviceHeight * 0.03,
-            ),
-            _registerAccountLink(),
-          ],
-        ),
-      ),
+          padding: EdgeInsets.symmetric(
+            horizontal: _deviceWidth * 0.03,
+            vertical: _deviceHeight * 0.02,
+          ),
+          height: _deviceHeight * 0.98,
+          width: _deviceWidth * 0.97,
+          child: ListView(
+            children: [
+              SizedBox(
+                height: _deviceHeight * 0.04,
+              ),
+              Container(
+                height: 180,
+                width: 180,
+                child: const Image(
+                    image: AssetImage('assets/images/ansiedadGrande.png')),
+              ),
+              // _pageTitle(),
+              SizedBox(
+                height: _deviceHeight * 0.04,
+              ),
+              _loginForm(),
+              SizedBox(
+                height: _deviceHeight * 0.04,
+              ),
+              _loginButton(),
+              SizedBox(
+                height: _deviceHeight * 0.03,
+              ),
+              Center(
+                child: _registerAccountLink(),
+              )
+            ],
+          )
+          // Column(
+          //   mainAxisSize: MainAxisSize.max,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   crossAxisAlignment: CrossAxisAlignment.center,
+          //   children: [
+          //     Container(
+          //       height: 180,
+          //       width: 180,
+          //       child: const Image(
+          //           image: AssetImage('assets/images/ansiedadGrande.png')),
+          //     ),
+          //     // _pageTitle(),
+          //     SizedBox(
+          //       height: _deviceHeight * 0.04,
+          //     ),
+          //     _loginForm(),
+          //     SizedBox(
+          //       height: _deviceHeight * 0.04,
+          //     ),
+          //     _loginButton(),
+          //     SizedBox(
+          //       height: _deviceHeight * 0.03,
+          //     ),
+          //     _registerAccountLink(),
+          //   ],
+          ),
     );
   }
 
