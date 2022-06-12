@@ -25,12 +25,16 @@ class TopBar extends StatelessWidget {
 
   Widget _buildUI() {
     return Container(
+      padding: EdgeInsets.only(top: 20),
       height: _deviceHeight * 0.10,
       width: _deviceWidth,
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Wrap(
+        alignment: WrapAlignment.spaceAround,
+        spacing: 10.0,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        // mainAxisSize: MainAxisSize.max,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (secondaryAction != null) secondaryAction!,
           _titleBar(),
