@@ -77,14 +77,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: _pages[_currentPage],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 24, 72, 87),
+        backgroundColor: const Color.fromARGB(255, 24, 72, 87),
         currentIndex: _currentPage,
         onTap: (_index) {
           setState(() {
             _currentPage = _index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             label: "Chats",
             icon: Icon(
