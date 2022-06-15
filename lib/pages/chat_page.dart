@@ -52,7 +52,7 @@ class _ChatPageState extends State<ChatPage> {
       providers: [
         ChangeNotifierProvider<ChatPageProvider>(
           create: (_) => ChatPageProvider(
-              this.widget.chat.uid, _auth, _messagesListViewController),
+              widget.chat.uid, _auth, _messagesListViewController),
         ),
       ],
       child: _buildUI(),
@@ -78,7 +78,7 @@ class _ChatPageState extends State<ChatPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   TopBar(
-                    this.widget.chat.title(),
+                    widget.chat.title(),
                     fontSize: 10,
                     primaryAction: IconButton(
                       icon: const Icon(
@@ -176,7 +176,7 @@ class _ChatPageState extends State<ChatPage> {
           children: [
             _messageTextField(),
             _sendMessageButton(),
-            _imageMessageButton(),
+            // _imageMessageButton(),
           ],
         ),
       ),

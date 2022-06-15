@@ -81,7 +81,7 @@ class _UsersPageState extends State<UsersPage> {
               TopBar(
                 'Users',
                 primaryAction: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.logout,
                     color: Color.fromRGBO(0, 82, 218, 1.0),
                   ),
@@ -121,7 +121,7 @@ class _UsersPageState extends State<UsersPage> {
       if (_users != null) {
         if (_users.length != 0) {
           return ListView.builder(
-            itemCount: _users.length,
+            itemCount: _users.length, //cuantos quiero en la lista de usuarios
             itemBuilder: (BuildContext _context, int _index) {
               return CustomListViewTile(
                 height: _deviceHeight * 0.10,
@@ -141,7 +141,7 @@ class _UsersPageState extends State<UsersPage> {
             },
           );
         } else {
-          return Center(
+          return const Center(
             child: Text(
               "No Users Found.",
               style: TextStyle(
@@ -151,7 +151,7 @@ class _UsersPageState extends State<UsersPage> {
           );
         }
       } else {
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(
             color: Colors.white,
           ),

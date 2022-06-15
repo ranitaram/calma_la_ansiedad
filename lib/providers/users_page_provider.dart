@@ -44,9 +44,11 @@ class UsersPageProvider extends ChangeNotifier {
 
   void getUsers({String? name}) async {
     _selectedUsers = [];
+    //users?.removeWhere((user) => user.uid == user.uid);
     try {
       _database.getUsers(name: name).then(
         (_snapshot) {
+          //users?.removeWhere((user) => user.uid == user.uid);
           users = _snapshot.docs.map(
             (_doc) {
               Map<String, dynamic> _data = _doc.data() as Map<String, dynamic>;
@@ -64,6 +66,7 @@ class UsersPageProvider extends ChangeNotifier {
   }
 
   void updateSelectedUsers(ChatUser _user) {
+    // users?.removeWhere((user) => user.uid == user.uid);
     if (_selectedUsers.contains(_user)) {
       _selectedUsers.remove(_user);
     } else {
