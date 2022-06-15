@@ -47,3 +47,4 @@ app.*.map.json
 
 dependency_injection.dart
 admon_ads.dart
+.env
