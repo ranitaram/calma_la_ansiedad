@@ -8,6 +8,6 @@
 
 class Anuncios {
   static String appId = "ca-app-pub-2881554325307479~1168665681";
-  static String banner = "ca-app-pub-3940256099942544/6300978111";
-  static String inter = "ca-app-pub-3940256099942544/1033173712";
+  static String banner = "ca-app-pub-2881554325307479/8142698768";
+  static String inter = "ca-app-pub-2881554325307479/5680186958";
 }
